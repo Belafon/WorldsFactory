@@ -1,0 +1,16 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	objects.story.lastMessage.options [0] = "Vrátit se zpět na louku za pastevcem"
+
+	objects.Derek.location = objects.cliff
+	message = """
+	Po travnaté louce Derek lezl do kopce směrem k hraně 
+	skalní stěny. Ovce zatím nikde. Zadýchaný dál
+	pokračoval až skoro nahoru, když náhle uslyšel slabé 
+	zabečení. Rozhlédl se... a uviděl bílé cosi vykukující z trávy.
+	Ovečka si hověla v trávě a přežvikovala.
+	"""
+	
+	objects.Derek.addInformation("Ovce šla směrem k útesu")
+	objects.story.lastMessage.message = message
+	pass

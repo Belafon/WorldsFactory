@@ -1,0 +1,2 @@
+def Condition(self):
+	return  "Zkusit vyměnit informaci za měděnou minci" == objects.story.choosenOption

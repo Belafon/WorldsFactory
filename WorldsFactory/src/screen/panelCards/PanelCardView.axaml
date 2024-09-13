@@ -1,0 +1,120 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:panelCards="clr-namespace:WorldsFactory.screen.panelCards;assembly=WorldsFactory"
+             xmlns:cards="clr-namespace:WorldsFactory.screen.panelCards.cards;assembly=WorldsFactory"
+             xmlns:wf="using:WorldsFactory.screen.panelCards"
+             x:DataType="wf:PanelCardViewModel"
+             x:Class="WorldsFactory.screen.panelCards.PanelCardView"
+             xmlns:local="clr-namespace:WorldsFactory.screen"
+             xmlns:localPanelCards="clr-namespace:WorldsFactory.screen.panelCards"
+             Name="panelCardName">
+
+    <Border
+        BorderBrush="Black"
+        BorderThickness="2">
+            
+        <DockPanel> 
+            <ScrollViewer 
+                HorizontalScrollBarVisibility="Hidden" 
+                DockPanel.Dock="Top" 
+                VerticalScrollBarVisibility="Disabled" 
+                VerticalSnapPointsType="None" >
+
+                <ListBox
+                    ItemsSource="{Binding cards}"
+                    SelectedItem="{Binding FocusedCard}"
+                    Name="tabs" 
+                    SelectionMode="Single,AlwaysSelected">
+                    
+
+                    <ListBox.Styles>
+                        <Style Selector="ListBoxItem">
+                            <Setter Property="Padding" Value="0"/>
+                        </Style>
+                    </ListBox.Styles>
+
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel> 
+
+                    <ListBox.ItemTemplate>
+
+                        <DataTemplate
+                            x:DataType="wf:Card">
+                                
+                                <StackPanel
+                                    Orientation="Horizontal" 
+                                    Name="cardsTabContainer"
+                                    localPanelCards:DragCardPressedBehaviour.IsSet="True"
+                                    localPanelCards:DragCardPressedBehaviour.Card="{Binding card}"
+                                    DragDrop.AllowDrop="True"
+                                    Height="30"
+                                    MinWidth="125"
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"
+                                    Background="{Binding $parent[ListBoxItem].Background}">
+
+                                        <Border BorderThickness="0 0 0 0" Padding="0 0 0 0"
+                                            Name="LeftBorder"
+                                            Background="#5f5"/>
+                                        
+                                        <Border BorderThickness="0 0 0 0" Padding="2 0 0 0"
+                                            Background="#0fff"/>
+
+                                    <DockPanel Name="tabItem">
+                                        <Button DockPanel.Dock="Left"
+                                            Height="20" Width="20" Background="Red" VerticalAlignment="Center"
+                                            Command="{Binding CloseItself}">
+                                            <Svg Path="/res/images/icons/closeCard.svg" 
+                                                Width="13" Height="13" Margin="1 1 0 0" 
+                                                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Button>
+                                        <TextBlock Text="{Binding TabName}" 
+                                            Padding="4 0 0 2" VerticalAlignment="Center"/>
+                                    </DockPanel>
+                                    
+                                        <Border BorderThickness="0 0 0 0" Padding="0 0 5 0"
+                                            Background="#0fff" />
+
+                                        <Border BorderThickness="0 0 0 0" Padding="0 0 0 0"
+                                            Background="#5f5"
+                                            Name="RightBorder" />
+                                </StackPanel>
+
+                        </DataTemplate> 
+                    </ListBox.ItemTemplate> 
+                </ListBox> 
+            </ScrollViewer>
+                
+                <Grid
+                    ColumnDefinitions="0, *" 
+                    RowDefinitions="0, *"
+                    Name="CardsContentWindow"
+                    localPanelCards:DragCardMoveBehavior.IsSet="True"
+                    DragDrop.AllowDrop="True">
+
+                    <Canvas Name="PanelCardsCanvas" Grid.Row="0" Grid.Column="0"
+                        Width="0"
+                        Height="0"
+                        ClipToBounds="False"
+                        ZIndex="4">
+                    </Canvas>
+                    <ScrollViewer 
+                        HorizontalScrollBarVisibility="Hidden"
+                        VerticalScrollBarVisibility="Auto"
+                        HorizontalSnapPointsType="None" 
+                        Grid.Row="1" Grid.Column="1">
+                        
+                        <UserControl Content="{Binding CardBody}" />
+                    
+                    </ScrollViewer>
+                
+                </Grid>
+        </DockPanel>
+    </Border>
+</UserControl>

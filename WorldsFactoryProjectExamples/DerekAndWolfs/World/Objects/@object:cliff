@@ -1,0 +1,35 @@
+{
+  "id": "@object:cliff",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Place"
+  },
+  "Name": "cliff",
+  "Title": "cliff - Place",
+  "InitMethod": {
+    "id": "@method:@object:_cliff_initialize",
+    "Name": "cliff_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "cliff",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Place"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

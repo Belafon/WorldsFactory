@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.world.library.classStructure.ParameterCreatorView"
+      			 xmlns:wf="using:WorldsFactory.world.library.classStructure"
+             x:DataType="wf:ParameterCreatorViewModel">
+  <StackPanel Orientation="Horizontal">
+    <AutoCompleteBox 
+      Name="TypeOfParameterAutoCompleteBox"
+      ItemsSource="{Binding Library.AllTypes}"
+      Text="{Binding TypeInput}"
+      Watermark="Parameter Type"
+      FilterMode="ContainsOrdinal"
+      MinWidth="180"/>
+      <TextBox
+        Name="NameOfParameterTextBox" 
+        MinWidth="180" 
+        Text="{Binding NameInput}"
+        Watermark="Parameter Name"/>
+  </StackPanel>
+</UserControl>

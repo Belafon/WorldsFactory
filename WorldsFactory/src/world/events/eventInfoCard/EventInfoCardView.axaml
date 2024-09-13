@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:wf="using:WorldsFactory.world.events.eventsInfoCard"
+             x:DataType="wf:EventInfoCardViewModel"
+             x:Class="WorldsFactory.world.events.eventsInfoCard.EventInfoCardView">
+
+  <Grid ColumnDefinitions="3*, 4, 1*">
+  
+    <ScrollViewer 
+       Grid.Column="0"
+       HorizontalScrollBarVisibility="Hidden"
+       VerticalScrollBarVisibility="Auto"
+       HorizontalSnapPointsType="None">
+      <DockPanel Name="contentEventInfo"/>  
+    </ScrollViewer>
+
+    <GridSplitter Grid.Column="1" Background="Black" ResizeDirection="Columns"/>
+
+    <TreeView Grid.Column="2"
+          ItemsSource="{Binding EventTreeViewRootItems}"
+          SelectedItems="{Binding SelectedItems}"
+          Name="ClassInfoCardsTreeView">
+          
+        <TreeView.DataTemplates >
+          <TreeDataTemplate x:DataType="wf:EventConditionAndAction" >
+            <TextBlock Text="{Binding Name}" />
+          </TreeDataTemplate>
+
+          <TreeDataTemplate x:DataType="wf:EventSequenceManager" >
+            <TextBlock Text="{Binding Name}" />
+          </TreeDataTemplate>
+        </TreeView.DataTemplates>
+    </TreeView>
+  </Grid>
+</UserControl>

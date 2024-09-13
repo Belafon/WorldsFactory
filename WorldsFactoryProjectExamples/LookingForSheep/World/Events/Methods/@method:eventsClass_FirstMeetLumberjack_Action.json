@@ -1,0 +1,34 @@
+def Action(self):
+	last_location = objects.Derek.location
+	objects.Derek.location = objects.forest_leafy
+	message = ""
+	if last_location == objects.meadow:
+		message  = """
+	Derek kráčí po okousané travnaté pastvnině k 
+	vysokým prostupným jehličnatým stromům. 
+		"""
+	elif last_location == objects.lake:
+		message = """
+	Derek se vrací zpět zkrz hustý porost do stínu 
+	vysokých stromů. 
+		"""
+	message += """
+	Prochází mezi vysokými šedivými kmeny s
+	tmavým jehličým zakrývající oblohu. Rozhlíží 
+	se a naslouchá, ovšem po ztracené ovci ani 
+	památky. Pouze cvrlikot ptáčků, line se krajinou...
+	
+	Když tu, slabé klepání ozývá se z dáli. S každým 
+	krokem zvuk pracovité sekery sílí. 
+	"Dobrý" pozdravil Derek dřevorubce.
+	"Dobrej" odpověděl nepřítomně statný chlapík 
+	a otřel si orosené čelo do rukávu.
+	"""
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options [0] = "Začít konverzaci"
+	objects.story.lastMessage.options [1] = "Jít hledat k jezeru"
+	objects.story.lastMessage.options [2] = "Jít se podívat na louku"
+	
+	objects.story.lastMessage.message = message
+	pass

@@ -1,0 +1,3 @@
+def lumberjack_initialize(lumberjack):
+	lumberjack.informations[0] = "Mám hlad"
+	pass

@@ -1,0 +1,21 @@
+{
+  "name": "GoToDeepForest",
+  "tags": [],
+  "id": "@eventContainer:GoToDeepForest",
+  "isAtFirstLevel": true,
+  "events": [
+    {
+      "referenceType": "Event",
+      "id": "@event:LookingForSheepInDeepForest"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:ComeBackFromDeepForest"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:LookingForSheepInDeepForestWithoutLumberjack"
+    }
+  ],
+  "subContainers": []
+}

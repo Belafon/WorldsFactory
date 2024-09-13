@@ -1,0 +1,3 @@
+def currentStoryMessage_initialize(currentStoryMessage):
+	currentStoryMessage.message = "ahojda"
+	pass

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">World</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_name">Welcome adventurer in our World!</string>
+    <string name="welcoming_text">This short tutorial will bring you through the mechanics of this universe.</string>
+    <string name="author">Developed by Ondřej Tichavský</string>
+    <string name="confirm">Confirm</string>
+    <string name="now_choose_your_name">Now, choose your name...</string>
+    <string name="connext_server_name">Your name (without spaces)</string>
+    <string name="connect_to_last_server">Connect to last server</string>
+    <string name="ip_adress">Ip adress</string>
+    <string name="connect">Connect</string>
+    <string name="port">port</string>
+    <string name="tutorial">Tutorial</string>
+
+    <string name="butStartGame">New Game</string>
+    <string name="Character">Character</string>
+    <string name="butStats">Stats</string>
+    <string name="butNastaveni">Settings</string>
+    <string name="AboutGame">About Game</string>
+    <string name="Exit">Exit</string>
+</resources>

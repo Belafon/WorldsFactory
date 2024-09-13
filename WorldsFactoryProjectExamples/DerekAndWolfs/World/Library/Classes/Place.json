@@ -1,0 +1,80 @@
+{
+  "id": "@class:Place",
+  "postfixId": "Place",
+  "Name": "Place",
+  "description": "",
+  "parent": null,
+  "children": [],
+  "properties": [
+    {
+      "id": "@property:Place_x",
+      "name": "x",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:Integer",
+        "GetPostfixId": "Integer"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:Place_y",
+      "name": "y",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:Integer",
+        "GetPostfixId": "Integer"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:Place_description",
+      "name": "description",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:Place_weather",
+      "name": "weather",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:Place_clouds",
+      "name": "clouds",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

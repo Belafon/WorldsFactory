@@ -1,0 +1,4 @@
+def clearOptionsArray(self):
+	for i in range(0, self.options.length - 1):
+		self.options[i] = None
+	pass

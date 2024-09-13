@@ -1,0 +1,84 @@
+{
+  "id": "@event:FirstMeetLumberjack",
+  "Name": "FirstMeetLumberjack",
+  "Condition": {
+    "id": "@method:eventsClass_FirstMeetLumberjack_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_firstMeetLamerjack"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_FirstMeetLumberjack",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_FirstMeetLumberjack_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_firstMeetLamerjack"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_FirstMeetLumberjack",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [
+      {
+        "referenceType": "Event",
+        "id": "@event:Initialize"
+      },
+      {
+        "referenceType": "Event",
+        "id": "@event:GoToMeadow"
+      },
+      {
+        "referenceType": "Event",
+        "id": "@event:StartConversationWithShepherd"
+      },
+      {
+        "referenceType": "Event",
+        "id": "@event:FirstMeetFisherman"
+      },
+      {
+        "referenceType": "Event",
+        "id": "@event:QuestionFishermanLostSheep"
+      },
+      {
+        "referenceType": "Event",
+        "id": "@event:StartConversationWithFisherman"
+      }
+    ],
+    "EventContainerReference": {
+      "referenceType": "EventContainer",
+      "id": "@eventContainer:TalkWithLumberjack"
+    }
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

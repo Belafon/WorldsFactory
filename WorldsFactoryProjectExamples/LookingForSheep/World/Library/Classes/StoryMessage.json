@@ -1,0 +1,64 @@
+{
+  "id": "@class:StoryMessage",
+  "postfixId": "StoryMessage",
+  "Name": "StoryMessage",
+  "description": "",
+  "parent": null,
+  "children": [],
+  "properties": [
+    {
+      "id": "@property:StoryMessage_message",
+      "name": "message",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:StoryMessage_options",
+      "name": "options",
+      "arrayBrackets": "[10]",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "id": "@method:StoryMessage_clearOptionsArray",
+      "Name": "clearOptionsArray",
+      "ReturnType": {
+        "id": "@basicType:Void",
+        "GetPostfixId": "Void"
+      },
+      "Parameters": [
+        {
+          "Name": "self",
+          "Type": {
+            "referenceType": "Class",
+            "id": "@class:StoryMessage"
+          }
+        }
+      ],
+      "classesPostfixId": "StoryMessage",
+      "tags": [
+        "method",
+        "Method"
+      ]
+    }
+  ],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

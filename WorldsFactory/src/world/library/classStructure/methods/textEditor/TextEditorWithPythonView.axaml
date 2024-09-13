@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.world.library.classStructure.TextEditorWithPythonView"
+             xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+             xmlns:wf="using:WorldsFactory.world.library.classStructure"
+             xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+             x:DataType="wf:TextEditorWithPythonView">
+  <AvaloniaEdit:TextEditor
+    Name="TextEditorWithPython"
+    ShowLineNumbers="True"
+    FontWeight="Light"
+    FontSize="14"
+    FontFamily="Cascadia Code,Consolas,Menlo,Monospace">
+  </AvaloniaEdit:TextEditor>
+</UserControl>
+

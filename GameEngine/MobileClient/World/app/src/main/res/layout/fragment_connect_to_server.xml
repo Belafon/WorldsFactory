@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/startMenu"
+            android:paddingLeft="150dp"
+            android:paddingRight="150dp"
+            android:layout_gravity="center">
+            <EditText
+                android:id="@+id/edit_ip"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:hint="@string/ip_adress" />
+            <EditText
+                android:id="@+id/port"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:hint="@string/port"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:text="25555"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="connect"
+                android:hint="@string/connect"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/themeTransparent"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="startTutorial"
+                android:hint="@string/tutorial"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:visibility="gone"
+                android:backgroundTint="@color/themeTransparent"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.world.library.classStructure.ChangeParentView"
+             xmlns:wf="using:WorldsFactory.world.library.classStructure"
+             x:DataType="wf:ChangeParentViewModel" >
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <AutoCompleteBox 
+             Name="SetParentAutoCompleteBox"
+             MinWidth="150" 
+             ItemsSource="{Binding Library.Classes}"
+             FilterMode="ContainsOrdinal" 
+             Text="{Binding Text}" 
+             Watermark="@parent:" />
+    </Grid>
+</UserControl>

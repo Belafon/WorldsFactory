@@ -1,0 +1,6 @@
+def time_initialize(time):
+	# possible values...
+	# morning, afternoon, sunset_1, night, after_midnight or sunrise
+	# for simplicity the type of the currentPartOfDay field is string
+	time.currentPartOfDay = "morning"
+	pass

@@ -1,0 +1,61 @@
+{
+  "id": "@event:GoToCliff",
+  "Name": "GoToCliff",
+  "Condition": {
+    "id": "@method:eventsClass_GoToCliff_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_GoToCliff"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_GoToCliff",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_GoToCliff_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_GoToCliff"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_GoToCliff",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [
+      {
+        "referenceType": "Event",
+        "id": "@event:ExchangeInfoForGoldenCoin"
+      }
+    ],
+    "EventContainerReference": null
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

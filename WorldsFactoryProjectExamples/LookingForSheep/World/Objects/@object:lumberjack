@@ -1,0 +1,35 @@
+{
+  "id": "@object:lumberjack",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Creature"
+  },
+  "Name": "lumberjack",
+  "Title": "lumberjack - Creature",
+  "InitMethod": {
+    "id": "@method:@object:_lumberjack_initialize",
+    "Name": "lumberjack_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "lumberjack",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Creature"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

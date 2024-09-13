@@ -1,0 +1,56 @@
+{
+  "id": "@event:Initialize",
+  "Name": "Initialize",
+  "Condition": {
+    "id": "@method:eventsClass_Initialize_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_Initialize"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_Initialize",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_Initialize_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_Initialize"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_Initialize",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [],
+    "EventContainerReference": null
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

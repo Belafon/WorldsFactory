@@ -1,0 +1,5 @@
+def deep_forest_initialize(deep_forest):
+	deep_forest.description = "forest_spurce"
+	deep_forest.weather = "idle"
+	deep_forest.clouds = "overcast"
+	pass

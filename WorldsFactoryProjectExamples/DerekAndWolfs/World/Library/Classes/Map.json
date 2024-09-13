@@ -1,0 +1,28 @@
+{
+  "id": "@class:Map",
+  "postfixId": "Map",
+  "Name": "Map",
+  "description": "",
+  "parent": null,
+  "children": [],
+  "properties": [
+    {
+      "id": "@property:Map_places",
+      "name": "places",
+      "arrayBrackets": "[2][3]",
+      "type": {
+        "referenceType": "Class",
+        "id": "@class:Place"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

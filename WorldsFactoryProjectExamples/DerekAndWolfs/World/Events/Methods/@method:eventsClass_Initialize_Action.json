@@ -1,0 +1,55 @@
+def Action(self):
+	objects.map.places[0][0] = objects.forest_leafy
+	objects.map.places[0][1] = objects.meadow
+	objects.map.places[1][0] = objects.mountain_meadow
+	objects.map.places[1][1] = objects.west_forest_leafy
+	objects.map.places[1][2] = objects.deep_forest
+	objects.map.places[0][2] = objects.cliff
+	
+	objects.story.lastMessage = objects.currentStoryMessage
+	
+	objects.story.lastMessage.clearOptionsArray()
+	objects.story.lastMessage.options [0] = "Začít konverzaci"
+	objects.story.lastMessage.options [1] = "Pokračovat v cestě"
+	
+	objects.story.lastMessage.message  = """
+	Derek odpovídá obrázku docela běžného obchodníka.
+	Jeho cesty obvykle vedly mezi jihovýchodním pobřežím 
+	Geparimu a horských oblastí v severnější části až do měst
+	v úpatí Korunového pohoří.
+	
+	V obnošeném kabátci, s brašnou houpací se mu po boku, 
+	kráčí po prašné cestě. Slunce se pomalu snáší k obzoru, 
+	barví oblohu do odstínů oranžové a fialové. Derek si utahuje 
+	šátek kolem krku a zrychluje krok. Cesta do Eldhamu je ještě 
+	dlouhá a noc se blíží.
+
+	Cestuje už několik dní z Tarsis, rušného obchodního města na 
+	jihovýchodním pobřeží Geparimu. Tam prodává kožešiny a sušené ovoce, 
+	které si na své cestě z hor nasbíral. V Eldhamu, malebném městečku 
+	ležícím v úpatí Korunového pohoří, doufá, že nakoupí zásoby na další 
+	cestu.
+	
+	Po jeho boku klopítá huňatá klisna s hnědou dlouhou srstí.
+	Cesta pěkně ubýhá, čas také... Cesta se proplétá mezi hustými lískami.
+	
+	Po několika hodinách chůze Derek došel na křižovatku. Z druhé cesty se 
+	k němu blíží muž oblečený v prostých šatech. Na zádech nese pytle s obilím.	
+	"""
+	
+	objects.time.currentPartOfDay = "afternoon"
+	
+	# weather can be one of these values:
+	#       idle, gentle_rain, rain, heavy_rain, storm
+	
+	objects.forest_leafy.weather = "idle"
+	objects.meadow.weather = "idle"
+	objects.mountain_meadow.weather = "idle"
+	objects.west_forest_leafy.weather = "idle"
+	
+	# type of clouds can be one of these:
+	# clear, few, scattered, overcast
+	objects.forest_leafy.clouds = "clear"
+	objects.meadow.clouds = "clear"
+	objects.mountain_meadow.clouds = "clear"
+	objects.west_forest_leafy.clouds = "clear"

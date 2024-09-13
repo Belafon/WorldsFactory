@@ -1,0 +1,13 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	objects.story.lastMessage.options [0] = "Jít hledat hluboko do lesa"
+	message = """
+	"Nemohl byste tam jít prosím se mnou? Já se vlků
+	dost bojím."
+	
+	"Hmm..." Zamyslel se dřevorubec. "Nu dobrá.
+	Pastevec je můj přítel a když je to jeho ovce, proč ne.
+	Alespoň si dám chvíli pauzu."
+	"""
+	objects.story.lastMessage.message = message
+	pass

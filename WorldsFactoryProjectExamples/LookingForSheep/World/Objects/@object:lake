@@ -1,0 +1,35 @@
+{
+  "id": "@object:lake",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Place"
+  },
+  "Name": "lake",
+  "Title": "lake - Place",
+  "InitMethod": {
+    "id": "@method:@object:_lake_initialize",
+    "Name": "lake_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "lake",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Place"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

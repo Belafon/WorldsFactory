@@ -1,0 +1,35 @@
+{
+  "id": "@object:shepherd",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Creature"
+  },
+  "Name": "shepherd",
+  "Title": "shepherd - Creature",
+  "InitMethod": {
+    "id": "@method:@object:_shepherd_initialize",
+    "Name": "shepherd_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "shepherd",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Creature"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

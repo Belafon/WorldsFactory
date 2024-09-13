@@ -1,0 +1,17 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	objects.Derek.addInformation("Ovce šla směrem k útesu")
+	
+	objects.story.lastMessage.options [0] = "Jít se podívat k útesu"
+	
+	message = """
+	"Co byste řekl na to, že vám za tu informaci dám tuto zlatou minci?"
+	"Hmm... Tuto říkáte? Tak to se můžeme domluvit."
+	
+	Derek předal rybáři nalezenou zlatou minci  a rybář odpověděl.
+	"Dobrá tedy. Ovce vyběhla z lesa, což je docela zvláštní, nicméně pak se vydala
+	směrem nahoru po louce kolem lesa. Směřovala k útesu."'
+	"""
+	objects.story.lastMessage.message = message
+	
+	pass

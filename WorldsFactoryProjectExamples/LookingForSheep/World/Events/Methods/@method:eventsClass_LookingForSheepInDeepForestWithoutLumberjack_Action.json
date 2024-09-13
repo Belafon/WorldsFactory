@@ -1,0 +1,28 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	message = """
+	Derek kráčí hlouběji a hlouběji do lesa. Jehličnaté stromy
+	se tyčí vysoko do nebe, které je zakryté hustou vrstvou 
+	jehličí...
+	
+	Po ovci ovšem ani vidu, ani slechu... Nikde nic. Nebo že by? Něco se 
+	zlatavě zalesklo na jehličí. Opravdu, na jehličí ležela zlatá mince.
+	"Jak se tady obějvila?" Podivil se Derek...
+	
+	Když tu náhle hluboké hrdelní "Wrarwrr...".
+	Derekovi ztuhla krev v žilách. Z několika stran se objevila
+	smečka několika vlků a pomalu  se přibližovala zpoza stromů.
+	
+	Derek utíkal. Utíkal co mu nohy stačily, zároveň ale za sebou slyšel dusot
+	vlčích tlapek. Srdce mu bilo, rychle pryč... "Á" Derek zakopnul o kořen, ale
+	adrenalin ho rychle vyšvihl zpět na nohy. Pravá, levá...
+	
+	Nohou mu projela silná bolest, jak se mu něco zahryzlo do stehna...
+	Následoval křik a pád.
+	
+	
+	Konec
+	"""
+	objects.Derek.location = objects.deep_forest
+	objects.story.lastMessage.message = message
+	pass

@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="40dp"
+    android:paddingTop="20dp"
+    android:paddingRight="80dp">
+    <TextView
+        android:id="@+id/surrounding_places_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="Surrounding places"
+        android:textSize="20sp" 
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:background="@drawable/button"
+        android:textColor="@color/white"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Scrollable grid layout"
+        android:padding="20dp">
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="7"
+                android:padding="5dp"
+                android:rowCount="7" />
+    </ScrollView>
+
+</LinearLayout>

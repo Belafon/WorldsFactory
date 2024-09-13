@@ -1,0 +1,14 @@
+{
+  "id": "@class:Item",
+  "postfixId": "Item",
+  "Name": "Item",
+  "description": "",
+  "parent": null,
+  "children": [],
+  "properties": [],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

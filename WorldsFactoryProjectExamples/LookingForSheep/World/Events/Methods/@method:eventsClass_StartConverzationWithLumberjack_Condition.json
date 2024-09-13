@@ -1,0 +1,7 @@
+def Condition(self):
+	start_conversation = "Začít konverzaci"
+	continue_conversation = "Pokračovat v konverzaci"
+	chosen_option = objects.story.choosenOption
+	is_start = chosen_option == start_conversation
+	is_continue = chosen_option == continue_conversation
+	return is_start or is_continue

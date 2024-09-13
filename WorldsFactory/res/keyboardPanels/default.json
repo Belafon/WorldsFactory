@@ -1,0 +1,26 @@
+{
+    "name": "default",
+    "set": [
+        {
+            "keys": [
+                {
+                    "action": "down",
+                    "key": "LeftCtrl"
+                },
+                {
+                    "action": "down",
+                    "key": "A"
+                },
+                {
+                    "action": "down",
+                    "key": "B"
+                }
+            ],
+            "reaction": {
+                "typeFunction": "writeText",
+                "function": "MAZEC",
+                "conditions": []
+            }
+        }
+    ]
+}

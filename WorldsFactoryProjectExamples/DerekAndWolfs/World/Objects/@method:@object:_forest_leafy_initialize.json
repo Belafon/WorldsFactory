@@ -1,0 +1,3 @@
+def forest_leafy_initialize(forest_leafy):
+	forest_leafy.description = "forest_leafy"
+	pass

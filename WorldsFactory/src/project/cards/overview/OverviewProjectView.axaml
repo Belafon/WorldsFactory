@@ -1,0 +1,229 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="450"
+             x:Class="WorldsFactory.project.OverviewProjectView"
+             xmlns:w="using:WorldsFactory"
+             xmlns:wf="using:WorldsFactory.project"
+             xmlns:wfw="using:WorldsFactory.world"
+             xmlns:wfww="using:WorldsFactory.world.library"
+             xmlns:wfwlc="using:WorldsFactory.world.library.classStructure"
+             x:DataType="wf:OverviewProjectViewModel"
+             Classes="card">
+
+
+  <TreeView
+      ItemsSource="{Binding WorldOrWorksTreeViewItems}"
+      SelectedItems="{Binding SelectedItems}"
+      Name="OverviewProjectTreeView">
+
+    <TreeView.DataTemplates >
+      <TreeDataTemplate DataType="wf:OverviewProjectViewModel" ItemsSource="{Binding WorldOrWorksTreeViewItems}">
+        <TextBlock x:DataType="wf:WorldOrWorksTreeViewItem" Text="{Binding Name}" />
+      </TreeDataTemplate>
+
+  <!--  World -->
+      <TreeDataTemplate DataType="wf:WorldTreeViewItem" ItemsSource="{Binding PartsOfWorld}">
+        <TextBlock Text="{Binding Name}" />
+      </TreeDataTemplate>
+    
+    <!--  Library -->
+      <TreeDataTemplate DataType="wfw:library.Library" ItemsSource="{Binding Classes}">
+        <TextBlock Text="{Binding NameOfPartOfWorld}" />
+      </TreeDataTemplate>
+
+      <TreeDataTemplate DataType="wfw:library.classStructure.Class">
+        <StackPanel
+          x:DataType="wfw:library.classStructure.Class">
+
+          <StackPanel 
+                Orientation="Horizontal" 
+                Width="{Binding $parent[Border].Width}"
+                Height="{Binding $parent[Border].Height}"
+                Background="Transparent">
+                <StackPanel.ContextMenu>
+                  <ContextMenu>
+                    <MenuItem Header="Rename" Command="{Binding $parent[UserControl].((wf:OverviewProjectViewModel)DataContext).RenameClass}"
+                        CommandParameter="{Binding $parent[StackPanel;1]}" />
+                        
+                    <MenuItem Header="Delete" Command="{Binding Delete}" 
+                        CommandParameter="{Binding $parent[TreeViewItem;1].DataContext}" />
+                  </ContextMenu>
+                </StackPanel.ContextMenu>
+
+                <TextBlock Name="className" Text="{Binding PostfixId}" Foreground="#DAFDFE" />
+
+              </StackPanel>  
+            </StackPanel>
+      </TreeDataTemplate>
+
+    <!--  Objects -->
+      <TreeDataTemplate DataType="wf:ObjectsTreeViewItem" ItemsSource="{Binding Objects.Collection}">
+          <TextBlock Text="{Binding NameOfPartOfWorld}" />
+      </TreeDataTemplate>
+
+      <TreeDataTemplate DataType="wfw:objects.WFObject">
+        <StackPanel
+          x:DataType="wfw:objects.WFObject">
+
+            <StackPanel 
+              Orientation="Horizontal" 
+              Width="{Binding $parent[Border].Width}"
+              Height="{Binding $parent[Border].Height}"
+              Background="Transparent" >
+              <StackPanel.ContextMenu>
+                <ContextMenu>
+                  <MenuItem Header="Rename" Command="{Binding $parent[UserControl].((wf:OverviewProjectViewModel)DataContext).RenameObject}"
+                        CommandParameter="{Binding $parent[StackPanel;1]}" />
+                  <MenuItem Header="Delete" Command="{Binding Delete}" />
+                </ContextMenu>
+              </StackPanel.ContextMenu>
+
+              <TextBlock Text="{Binding Title}" Name="objectName" Foreground="#FFFFAA" />
+
+            </StackPanel>
+        </StackPanel>  
+      </TreeDataTemplate>
+
+      <TreeDataTemplate DataType="wf:ObjectsGroupedByEventsTreeViewItem" ItemsSource="{Binding EventsWithRelatedObjects}">
+        <TextBlock Text="{Binding NameOfPartOfWorld}" />
+      </TreeDataTemplate>
+
+      <TreeDataTemplate DataType="wf:EventWithRelatedObjectsTreeViewItem" ItemsSource="{Binding Event.Action.Body.ReferencesToObjects}">
+        <StackPanel
+          x:DataType="wf:EventWithRelatedObjectsTreeViewItem">
+
+            <StackPanel 
+              Orientation="Horizontal" 
+              Width="{Binding $parent[Border].Width}"
+              Height="{Binding $parent[Border].Height}"
+              Background="Transparent" >
+              <StackPanel.ContextMenu>
+                <ContextMenu>
+                  <MenuItem Header="Rename" Command="{Binding $parent[UserControl].((wf:OverviewProjectViewModel)DataContext).RenameEventWithRelatedObjects}"
+                        CommandParameter="{Binding $parent[StackPanel;1]}" />
+                  <MenuItem Header="Delete" Command="{Binding Event.Delete}" />
+                </ContextMenu>
+              </StackPanel.ContextMenu>
+
+              <TextBlock Text="{Binding Event.Name}" Name="eventName" Foreground="#E601D8" />
+
+            </StackPanel>
+        </StackPanel>
+      </TreeDataTemplate>
+      
+    <!--  Events -->
+      <TreeDataTemplate DataType="wf:EventsTreeViewItem" ItemsSource="{Binding EventsPart}">
+        <TextBlock Text="{Binding NameOfPartOfWorld}" />
+      </TreeDataTemplate>
+
+      <TreeDataTemplate DataType="wf:AllEventsWorkTreeItem" ItemsSource="{Binding Events.Collection}">
+        <TextBlock Text="{Binding Name}" />
+      </TreeDataTemplate>
+
+      <TreeDataTemplate DataType="wfw:events.IEvent">
+        <StackPanel
+          x:DataType="wfw:events.IEvent">
+
+            <StackPanel  
+              Orientation="Horizontal" 
+              Width="{Binding $parent[Border].Width}"
+              Height="{Binding $parent[Border].Height}"
+              Background="Transparent" >
+              <StackPanel.ContextMenu>
+                <ContextMenu>
+                  <MenuItem Header="Rename" Command="{Binding $parent[UserControl].((wf:OverviewProjectViewModel)DataContext).RenameEvent}"
+                        CommandParameter="{Binding $parent[StackPanel;1]}" />
+                  <MenuItem Header="Delete" Command="{Binding Delete}" />
+                </ContextMenu>
+              </StackPanel.ContextMenu>
+
+              <TextBlock Text="{Binding Name}" Name="eventName" Foreground="#E601D8" />
+
+            </StackPanel>  
+          </StackPanel>  
+      </TreeDataTemplate>
+
+      <!--  EventContainers -->
+      <TreeDataTemplate DataType="wf:EventContainersTreeViewItem" ItemsSource="{Binding EventContainers}">
+        <StackPanel
+              Width="{Binding $parent[Border].Width}"
+              Height="{Binding $parent[Border].Height}">
+            <StackPanel.ContextMenu>
+              <ContextMenu>
+                <MenuItem Header="Add New" Command="{Binding AddNewEventContainer_Click}" />
+              </ContextMenu>
+            </StackPanel.ContextMenu>
+          <TextBlock Text="{Binding Name}" />
+        </StackPanel>
+      </TreeDataTemplate>
+
+      <TreeDataTemplate DataType="wf:EventContainerTreeViewItem" ItemsSource="{Binding Items}">
+        <StackPanel
+          x:DataType="wf:EventContainerTreeViewItem">
+
+            <StackPanel 
+              Orientation="Horizontal" 
+              Width="{Binding $parent[Border].Width}"
+              Height="{Binding $parent[Border].Height}"
+              Background="Transparent">
+              <StackPanel.ContextMenu>
+                <ContextMenu>
+                  <MenuItem Header="Add Event Container" Command="{Binding AddNewEventContainer_Click}"
+                        CommandParameter="{Binding $parent[w:MainWindow]}" />
+
+                  <MenuItem Header="Rename" Command="{Binding $parent[UserControl].((wf:OverviewProjectViewModel)DataContext).RenameEventContainer}"
+                        CommandParameter="{Binding $parent[StackPanel;1]}" />
+                  <MenuItem Header="Delete" Command="{Binding Container.Delete}" />
+                </ContextMenu>
+              </StackPanel.ContextMenu>
+
+                <TextBlock Text="{Binding Name}" 
+                  Name="eventContainerName" 
+                  Foreground="Gray" 
+                  FontWeight="Bold" />
+            </StackPanel>
+          </StackPanel>  
+      </TreeDataTemplate>
+
+      <!-- LinearEvents -->
+      <TreeDataTemplate DataType="wf:LinearEventWorkTreeItem" ItemsSource="{Binding LinearEvents}">
+        <TextBlock Text="{Binding Name}" />
+      </TreeDataTemplate>
+
+    <!--  Visualtisations -->
+      <TreeDataTemplate DataType="wf:VisualizationsTreeViewItem" ItemsSource="{Binding VisualisationParts}">
+        <TextBlock Text="{Binding NameOfPartOfWorld}" />
+      </TreeDataTemplate>
+
+      <TreeDataTemplate DataType="wf:EventSequenceVisualisation">
+        <StackPanel>
+
+            <StackPanel 
+              Orientation="Horizontal" 
+              Width="{Binding $parent[Border].Width}"
+              Height="{Binding $parent[Border].Height}"
+              Background="Transparent" >
+
+              <TextBlock Text="{Binding Name}" Name="visualisationName" />
+
+            </StackPanel>
+        </StackPanel>
+      </TreeDataTemplate>
+
+
+  <!--  Works -->
+      <TreeDataTemplate DataType="wf:WorksTreeViewItem" ItemsSource="{Binding Works}">
+        <TextBlock Text="{Binding Name}" />
+      </TreeDataTemplate> 
+    </TreeView.DataTemplates>
+
+    <TreeView.ItemContainerTheme>
+      <ControlTheme TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+        <Setter Property="IsExpanded" Value="True" />
+      </ControlTheme>
+    </TreeView.ItemContainerTheme>
+
+  </TreeView>
+</UserControl>

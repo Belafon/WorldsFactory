@@ -1,0 +1,53 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.world.createNew.CreatorObjectCardView"
+             xmlns:wf="using:WorldsFactory"
+             x:DataType="wf:world.createNew.CreatorObjectCardViewModel">
+        <StackPanel Orientation="Horizontal" Margin="10">
+            
+            <!-- TextBox for Type -->
+            <AutoCompleteBox x:Name="TypeTextBox"
+                     Width="200"
+                     Height="30"
+                     Margin="0 0 10 0"
+                     Watermark="Enter Type..."
+                     ItemsSource="{Binding Library.Classes}"
+                     HorizontalAlignment="Center"
+                     FilterMode="ContainsOrdinal"
+                     Text="{Binding Type}"
+                     VerticalAlignment="Center"/>
+                     
+
+            <!-- AutoCompleteBox with prefixes -->
+            <AutoCompleteBox x:Name="Prefixes"
+                             Width="150"
+                             Height="30"
+                             Margin="0 0 10 0"
+                             ItemsSource="{Binding Prefixes}" 
+                             FilterMode="ContainsOrdinal"
+                             Watermark="Enter Prefixes..."
+                             IsEnabled="False"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"/>
+
+            <!-- TextBox for ID -->
+            <TextBox x:Name="IdTextBox"
+                     Width="200"
+                     Height="30"
+                     Margin="0 0 10 0"
+                     Watermark="Enter ID..."
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"/>
+
+            <!-- Creation Button -->
+            <Button Content="Create"
+                    x:DataType="wf:world.createNew.CreatorWorldsItemWithIdCardView"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="0 0 10 0"
+                    Click="CreateItem_Clicked"/>
+        </StackPanel>
+</UserControl>

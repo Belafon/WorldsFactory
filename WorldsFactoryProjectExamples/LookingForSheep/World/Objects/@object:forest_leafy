@@ -1,0 +1,35 @@
+{
+  "id": "@object:forest_leafy",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Place"
+  },
+  "Name": "forest_leafy",
+  "Title": "forest_leafy - Place",
+  "InitMethod": {
+    "id": "@method:@object:_forest_leafy_initialize",
+    "Name": "forest_leafy_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "forest_leafy",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Place"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

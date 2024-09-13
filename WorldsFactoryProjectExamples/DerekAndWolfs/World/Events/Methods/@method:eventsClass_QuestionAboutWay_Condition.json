@@ -1,0 +1,2 @@
+def Condition(self):
+	return objects.story.choosenOption == "Zeptat se kam má Jakub namířeno"

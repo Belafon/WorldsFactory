@@ -1,0 +1,35 @@
+{
+  "id": "@object:mountain_meadow",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Place"
+  },
+  "Name": "mountain_meadow",
+  "Title": "mountain_meadow - Place",
+  "InitMethod": {
+    "id": "@method:@object:_mountain_meadow_initialize",
+    "Name": "mountain_meadow_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "mountain_meadow",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Place"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

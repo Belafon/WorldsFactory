@@ -1,0 +1,106 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:wf="using:WorldsFactory.world.library"
+             xmlns:met="using:WorldsFactory.world.library.classStructure"
+             x:DataType="wf:ClassInfoCardViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.world.library.ClassInfoCardView">
+
+  <Grid ColumnDefinitions="3*, 4, 1*">
+  
+    <ScrollViewer 
+       Grid.Column="0"
+       HorizontalScrollBarVisibility="Hidden"
+       VerticalScrollBarVisibility="Auto"
+       HorizontalSnapPointsType="None">
+      <DockPanel Name="contentClassInfo"/>  
+    </ScrollViewer>
+
+    <GridSplitter Grid.Column="1" Background="Black" ResizeDirection="Columns"/>
+
+    <TreeView Grid.Column="2"
+          ItemsSource="{Binding ClassTypeTreeViewItems}"
+          SelectedItems="{Binding SelectedItems}"
+          Name="ClassInfoCardsTreeView">
+          
+        <TreeView.DataTemplates >
+          <TreeDataTemplate x:DataType="wf:ParentTreeViewItem" >
+            <TextBlock Text="{Binding Name}" />
+          </TreeDataTemplate>
+        </TreeView.DataTemplates>
+
+        <TreeView.DataTemplates >
+          <TreeDataTemplate x:DataType="wf:ChildrenTreeViewItem" ItemsSource="{Binding Clazz.Children}" >
+            <TextBlock Text="{Binding Name}" />
+          </TreeDataTemplate>
+        </TreeView.DataTemplates>
+
+        <TreeView.DataTemplates >
+          <TreeDataTemplate x:DataType="wf:classStructure.types.IReference" >
+            <TextBlock Text="{Binding GetPostfixId}" />
+          </TreeDataTemplate>
+        </TreeView.DataTemplates>
+
+        <TreeView.DataTemplates >
+          <TreeDataTemplate x:DataType="wf:PropertiesTreeViewItem" ItemsSource="{Binding Properties}">
+            <TextBlock Text="{Binding Name}" />
+          </TreeDataTemplate>
+        </TreeView.DataTemplates>
+
+        <TreeView.DataTemplates >
+          <TreeDataTemplate x:DataType="wf:classStructure.Property">
+            <TextBlock Text="{Binding Name}" />
+          </TreeDataTemplate>
+        </TreeView.DataTemplates>
+        
+        <TreeView.DataTemplates >
+          <TreeDataTemplate x:DataType="wf:MethodsTreeViewItem" ItemsSource="{Binding Methods}">
+            <TextBlock Text="{Binding Name}" />
+          </TreeDataTemplate>
+          
+          <TreeDataTemplate x:DataType="wf:MethodTreeViewItem">
+            <StackPanel 
+              Orientation="Horizontal" 
+              Width="{Binding $parent[Border].Width}"
+              Height="{Binding $parent[Border].Height}"
+              Background="Transparent" 
+              Name="methodStackPanel">
+              <StackPanel.ContextMenu>
+                <ContextMenu>
+                  <MenuItem Header="Delete" Command="{Binding DeleteMethod}" />
+                </ContextMenu>
+              </StackPanel.ContextMenu>
+
+              <TextBlock Name="methodName" Text="{Binding Method.Name}" />
+
+            </StackPanel>  
+          </TreeDataTemplate>
+          
+          <TreeDataTemplate x:DataType="wf:PropertyTreeViewItem">
+            <StackPanel 
+              Orientation="Horizontal" 
+              Width="{Binding $parent[Border].Width}"
+              Height="{Binding $parent[Border].Height}"
+              Background="Transparent" >
+              <StackPanel.ContextMenu>
+                <ContextMenu>
+                  <MenuItem Header="Delete" Command="{Binding DeleteProperty}" />
+                </ContextMenu>
+              </StackPanel.ContextMenu>
+
+              <TextBlock Text="{Binding Property.FullName}" />
+
+            </StackPanel>
+          </TreeDataTemplate>
+        </TreeView.DataTemplates>
+
+      <TreeView.ItemContainerTheme>
+        <ControlTheme TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+          <Setter Property="IsExpanded" Value="True" />
+        </ControlTheme>
+      </TreeView.ItemContainerTheme>
+    </TreeView>
+  </Grid>
+</UserControl>

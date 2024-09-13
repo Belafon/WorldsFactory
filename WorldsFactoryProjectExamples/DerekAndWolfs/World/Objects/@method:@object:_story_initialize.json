@@ -1,0 +1,3 @@
+def story_initialize(story):
+	story.choosenOption = "startOption"
+	pass

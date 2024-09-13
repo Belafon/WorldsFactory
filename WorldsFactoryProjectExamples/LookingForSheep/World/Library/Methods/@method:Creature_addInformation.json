@@ -1,0 +1,6 @@
+def addInformation(self, information):
+	for i, value in enumerate(self.informations):
+		if value is None:
+			self.informations[i] = information
+			break
+	pass

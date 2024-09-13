@@ -1,0 +1,17 @@
+{
+  "name": "TalkWithJakub",
+  "tags": [],
+  "id": "@eventContainer:TalkWithJakub",
+  "isAtFirstLevel": true,
+  "events": [
+    {
+      "referenceType": "Event",
+      "id": "@event:QuestionAboutWay"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:StartConversation"
+    }
+  ],
+  "subContainers": []
+}

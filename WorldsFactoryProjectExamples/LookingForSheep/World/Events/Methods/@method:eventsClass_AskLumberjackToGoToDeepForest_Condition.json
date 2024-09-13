@@ -1,0 +1,2 @@
+def Condition(self):
+	return "Poprosit dřevorubce, aby šel se mnou do hlubokého lesa" == objects.story.choosenOption

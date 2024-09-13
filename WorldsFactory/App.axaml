@@ -1,0 +1,13 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="WorldsFactory.App">
+    <Application.Styles>
+        <FluentTheme />
+        <!-- <StyleInclude Source="avares://Avalonia.Themes.Fluent/FluentLight.xaml"></StyleInclude> -->
+        <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml" />
+    </Application.Styles>
+    <Application.Resources>
+        <Brush x:Key="TitleBarBackgroundColor">#4D4D4D</Brush>
+        <Brush x:Key="MainWindowBackgroundColor">#DEE1E6</Brush>
+    </Application.Resources>
+</Application>

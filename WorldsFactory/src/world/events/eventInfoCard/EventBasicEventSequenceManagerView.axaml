@@ -1,0 +1,54 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:wf="using:WorldsFactory.world.events.eventsInfoCard"
+          x:DataType="wf:EventBasicEventSequenceManagerViewModel"
+          mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+          x:Class="WorldsFactory.world.events.eventsInfoCard.EventBasicEventSequenceManagerView">
+  <StackPanel 
+      Orientation="Vertical"
+      HorizontalAlignment="Center" 
+      VerticalAlignment="Center">
+
+      <!-- Event sequence -->
+
+      <StackPanel Orientation="Horizontal">
+          <AutoCompleteBox 
+            x:Name="EventReferenceBox" 
+            ItemsSource="{Binding Events.Collection}" 
+            FilterMode="ContainsOrdinal"
+            Watermark="@event:"/>
+          <Button Content="Add" Command="{Binding AddEventCommand}" Margin="10,0,0,0" />
+      </StackPanel>
+      <ListBox x:Name="EventList" ItemsSource="{Binding SequenceManager.Events}" Margin="0,10,0,0">
+          <ListBox.ItemTemplate>
+              <DataTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Name}" Margin="0,3,10,0" />
+                    <Button 
+                      Content="Delete" 
+                      Command="{Binding $parent[wf:EventBasicEventSequenceManagerView].Model.RemoveEvent}" 
+                      CommandParameter="{Binding}" Margin="10,0,0,0" />
+                </StackPanel>
+              </DataTemplate>
+          </ListBox.ItemTemplate>
+      </ListBox>
+
+      <!-- Event container -->
+      
+      <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+          <TextBlock Text="Event container: " 
+            VerticalAlignment="Center" 
+            Margin="0,0,10,0" />
+          <AutoCompleteBox 
+            x:Name="EventContainerReferenceBox" 
+            ItemsSource="{Binding Events.ContainersLoader.IdManager.AllIds}" 
+            FilterMode="ContainsOrdinal"
+            Watermark="@eventContainer:" />
+          <Button Content="Set" Command="{Binding SetEventContainer_Click}" 
+            Margin="10,0,0,0" />
+      </StackPanel>
+
+  </StackPanel>
+</UserControl>

@@ -1,0 +1,33 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item android:color="#02000000" />
+
+    <!-- Semi-transparent overlay -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Custom shapes -->
+    <item android:top="40dp">
+        <rotate
+            android:fromDegrees="15"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="rectangle">
+                <solid android:color="#992E704E" />
+            </shape>
+        </rotate>
+    </item>
+    <item android:bottom="40dp">
+        <rotate
+            android:fromDegrees="-15"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="rectangle">
+                <solid android:color="#A12E704E" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

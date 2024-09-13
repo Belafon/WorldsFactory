@@ -1,0 +1,23 @@
+def Action(self):
+	objects.Derek.location = objects.mountain_meadow
+	firstPartOfMessage = ""
+	if objects.time.currentPartOfDay == "afternoon":
+		objects.time.currentPartOfDay = "sunset_1"
+		firstPartOfMessage += """
+		... Slunce začíná zapadat.
+		Derek rychle pospíchá do nejbližší vesnice, 
+		dříve než nastane úplná tma.
+		"""
+	else:
+		objects.time.currentPartOfDay = "night"
+		
+		firstPartOfMessage += """
+		Rychle do nejbližší vesnice, než bude úplná tma.
+		Ajaja bajaja
+		Tma je tu a Derek nevidí na cestu....
+		"Brr to je ale zima,  že já jsem vůbec někam šel..."
+		... potemělým krajem zazní dlouhé táhlé "Waůů"...
+		"""
+	
+	objects.story.lastMessage.message = firstPartOfMessage
+	pass

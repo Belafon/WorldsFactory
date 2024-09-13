@@ -1,0 +1,16 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	objects.Derek.location = objects.meadow
+	
+	objects.story.lastMessage.options [0] = "Začít konverzaci"
+	objects.story.lastMessage.options [1] = "Jít hledat k jezeru"
+	info = objects.Derek.informations
+	if not "Dřevorubce sežrali vlci" in info and not "Ovce není hluboko v lese"  in info:
+		objects.story.lastMessage.options [2] = "Jít hledat do lesa"
+	
+	message = """
+	Derek přichází zpět na louku ke stádu ovcí s pastevcem.
+	Přivítá ho štěkot a kývnutí na pozdrav.
+	"""
+	objects.story.lastMessage.message = message
+	pass

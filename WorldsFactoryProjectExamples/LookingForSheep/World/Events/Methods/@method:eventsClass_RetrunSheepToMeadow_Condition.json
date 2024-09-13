@@ -1,0 +1,2 @@
+def Condition(self):
+	return "Vrátit se zpět na louku za pastevcem" == objects.story.choosenOption

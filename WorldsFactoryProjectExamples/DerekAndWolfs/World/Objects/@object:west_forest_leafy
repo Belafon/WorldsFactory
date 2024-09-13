@@ -1,0 +1,35 @@
+{
+  "id": "@object:west_forest_leafy",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Place"
+  },
+  "Name": "west_forest_leafy",
+  "Title": "west_forest_leafy - Place",
+  "InitMethod": {
+    "id": "@method:@object:_west_forest_leafy_initialize",
+    "Name": "west_forest_leafy_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "west_forest_leafy",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Place"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

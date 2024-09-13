@@ -1,0 +1,64 @@
+{
+  "id": "@event:LookingForSheepInDeepForestWithoutLumberjack",
+  "Name": "LookingForSheepInDeepForestWithoutLumberjack",
+  "Condition": {
+    "id": "@method:eventsClass_LookingForSheepInDeepForestWithoutLumberjack_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_LookingForSheepInDeepForestWithoutLumberjack"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_LookingForSheepInDeepForestWithoutLumberjack",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_LookingForSheepInDeepForestWithoutLumberjack_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_LookingForSheepInDeepForestWithoutLumberjack"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_LookingForSheepInDeepForestWithoutLumberjack",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [
+      {
+        "referenceType": "Event",
+        "id": "@event:QuestionLumberjackLostSheep"
+      }
+    ],
+    "EventContainerReference": {
+      "referenceType": "EventContainer",
+      "id": "@eventContainer:GoToDeepForest"
+    }
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

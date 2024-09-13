@@ -1,0 +1,17 @@
+{
+  "id": "@class:Player",
+  "postfixId": "Player",
+  "Name": "Player",
+  "description": "",
+  "parent": {
+    "referenceType": "Class",
+    "id": "@class:Creature"
+  },
+  "children": [],
+  "properties": [],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

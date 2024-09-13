@@ -1,0 +1,30 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options [0] = "Jít se podívat na louku"
+	index = 1
+	info = objects.Derek.informations
+	if not "Dřevorubce sežrali vlci" in info and not "Ovce není hluboko v lese"  in info:
+		objects.story.lastMessage.options [index] = "Jít hledat do lesa"
+		index += 1
+	
+	if objects.goldenCoin in objects.Derek.inventory:
+		objects.story.lastMessage.options [index] = "Zkusit vyměnit informaci za zlatou minci"
+		index += 1
+	if objects.copperCoin in objects.Derek.inventory:
+		objects.story.lastMessage.options [index] = "Zkusit vyměnit informaci za měděnou minci"
+		index += 1
+	
+	message = """
+	"Hledám ovci, neviděl jste ji náhodou?"
+	Rybář si rozespale promnul oči a odpověděl.
+	"Náhodou viděl. Byla tady a někam odešla."
+	
+	Derek chvíli čekal, ale když viděl že rybář nehodlá pokračovat,
+	zeptal se. "A nevíte náhodou kam odešla? Víte, ta ovce patří zdejšímu
+	pastevci." Rybář odpověděl. "Ano, vím jakým směrem odešla, ale
+	nezajímá mě to. Pastevec se ke mně nechová zrovna hezky a 
+	tak nemám potřebu mu pomáhat."
+	"""
+	objects.story.lastMessage.message = message
+	pass

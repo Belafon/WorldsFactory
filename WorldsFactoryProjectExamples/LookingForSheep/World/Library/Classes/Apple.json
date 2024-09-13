@@ -1,0 +1,40 @@
+{
+  "id": "@class:Apple",
+  "postfixId": "Apple",
+  "Name": "Apple",
+  "description": "",
+  "parent": {
+    "referenceType": "Class",
+    "id": "@class:Item"
+  },
+  "children": [],
+  "properties": [],
+  "methods": [
+    {
+      "id": "@method:Apple_initialize",
+      "Name": "initialize",
+      "ReturnType": {
+        "id": "@basicType:Void",
+        "GetPostfixId": "Void"
+      },
+      "Parameters": [
+        {
+          "Name": "self",
+          "Type": {
+            "referenceType": "Class",
+            "id": "@class:Apple"
+          }
+        }
+      ],
+      "classesPostfixId": "Apple",
+      "tags": [
+        "method",
+        "Method"
+      ]
+    }
+  ],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

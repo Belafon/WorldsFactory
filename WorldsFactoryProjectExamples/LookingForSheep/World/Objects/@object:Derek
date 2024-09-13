@@ -1,0 +1,35 @@
+{
+  "id": "@object:Derek",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Player"
+  },
+  "Name": "Derek",
+  "Title": "Derek - Player",
+  "InitMethod": {
+    "id": "@method:@object:_Derek_initialize",
+    "Name": "Derek_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "Derek",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Player"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

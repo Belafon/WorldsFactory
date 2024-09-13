@@ -1,0 +1,35 @@
+{
+  "id": "@object:map",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Map"
+  },
+  "Name": "map",
+  "Title": "map - Map",
+  "InitMethod": {
+    "id": "@method:@object:_map_initialize",
+    "Name": "map_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "map",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Map"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

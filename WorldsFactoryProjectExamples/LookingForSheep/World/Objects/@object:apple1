@@ -1,0 +1,35 @@
+{
+  "id": "@object:apple1",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Apple"
+  },
+  "Name": "apple1",
+  "Title": "apple1 - Apple",
+  "InitMethod": {
+    "id": "@method:@object:_apple1_initialize",
+    "Name": "apple1_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "apple1",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Apple"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

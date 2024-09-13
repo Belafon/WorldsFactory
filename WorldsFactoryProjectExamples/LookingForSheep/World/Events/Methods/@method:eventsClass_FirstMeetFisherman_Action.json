@@ -1,0 +1,21 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options [0] = "Jít se podívat na louku"
+	objects.story.lastMessage.options [1] = "Zahájit konverzaci"
+	
+	index = 2
+	info = objects.Derek.informations
+	if not "Dřevorubce sežrali vlci" in info and not "Ovce není hluboko v lese"  in info:
+		objects.story.lastMessage.options [index] = "Jít hledat do lesa"
+		index += 1
+	objects.Derek.location = objects.lake
+	
+	objects.story.lastMessage.message = """
+	Derek přichází k nevelikému jezírku poblíž louky a lesa.  Na modré
+	hladině se leskne slunneční třpyt. A cvrčci pod nohama odskakují do
+	vedlejší trávy. 
+	
+	Na břehu si hoví rybář s udicí ve vodě a ve stínu vrby podřimuje.
+	"""
+	pass

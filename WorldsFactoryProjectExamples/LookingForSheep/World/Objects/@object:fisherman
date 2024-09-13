@@ -1,0 +1,35 @@
+{
+  "id": "@object:fisherman",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Creature"
+  },
+  "Name": "fisherman",
+  "Title": "fisherman - Creature",
+  "InitMethod": {
+    "id": "@method:@object:_fisherman_initialize",
+    "Name": "fisherman_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "fisherman",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Creature"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

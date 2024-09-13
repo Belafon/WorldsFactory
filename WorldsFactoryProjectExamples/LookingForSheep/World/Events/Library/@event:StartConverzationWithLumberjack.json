@@ -1,0 +1,68 @@
+{
+  "id": "@event:StartConverzationWithLumberjack",
+  "Name": "StartConverzationWithLumberjack",
+  "Condition": {
+    "id": "@method:eventsClass_StartConverzationWithLumberjack_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_StartConverzationWithLumberjack"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_StartConverzationWithLumberjack",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_StartConverzationWithLumberjack_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_StartConverzationWithLumberjack"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_StartConverzationWithLumberjack",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [
+      {
+        "referenceType": "Event",
+        "id": "@event:FirstMeetLumberjack"
+      },
+      {
+        "referenceType": "Event",
+        "id": "@event:TryToSellApplesToLumberjack"
+      }
+    ],
+    "EventContainerReference": {
+      "referenceType": "EventContainer",
+      "id": "@eventContainer:TalkWithLumberjack"
+    }
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

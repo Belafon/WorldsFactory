@@ -1,0 +1,2 @@
+def Condition(self):
+	return "Zkusit prodat nějaké jablko" == objects.story.choosenOption

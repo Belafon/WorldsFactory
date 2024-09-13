@@ -1,0 +1,45 @@
+def Action(self):
+	message = """
+	"Nechtěl byste něco k jídlu? Mohl bych vám prodat
+	nějaká jablka. Když se tak na vás dívám, tak i za výhodnější 
+	cenu. Co říáte?"
+	"""
+	
+	if "Mám hlad" in objects.lumberjack.informations:
+		message += """
+	"Abych se přiznal, mám docela hlad, ale domů je to docela 
+	daleko. Nějakej mědák v kapse mám."
+		"""
+		
+		apple = None # select an apple from inventory
+		for i, value in enumerate(objects.Derek.inventory):
+			if isinstance(value, @class:Apple):
+				apple = objects.Derek.inventory[i]
+				objects.Derek.inventory[i] = objects.copperCoin
+				break
+		
+		if apple == None:
+			message += """
+	"Jéje, už žádné nemám, asi jsem ho před chvilkou snědl."
+			"""
+		else:
+			coin = None
+			for i, value in enumerate(objects.lumberjack.inventory):
+				if isinstance(value, @class:Coin):
+					#apple = objects.lumberjack.inventory[i]
+					#objects.lumberjack.inventory[i] = None
+					break
+			
+			# lumberjack eats the apple immediately
+			for i, value in enumerate(objects.lumberjack.informations):
+				if value == "Mám hlad":
+					objects.lumberjack.informations[i] = None
+					break
+	else:
+		message += """
+		"Ani ne, díky."
+		"""
+	objects.story.lastMessage.clearOptionsArray()
+	objects.story.lastMessage.options [0] = "Pokračovat v konverzaci"
+	objects.story.lastMessage.message = message
+	pass

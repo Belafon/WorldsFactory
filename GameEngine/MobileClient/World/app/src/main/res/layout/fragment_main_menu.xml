@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center"
+    tools:context=".gameActivity.MainMenuFragment">
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/overview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/themeTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lists_48px"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/character"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/themeTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/face_48px" />
+
+        <ImageButton
+            android:id="@+id/visibles"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/themeTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/visibility_48px" />
+
+        <ImageButton
+            android:id="@+id/behaviour"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/themeTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/double_arrow_48px"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/map"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/themeTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/map_48px"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/inventory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/themeTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backpack_48px" />
+
+        <ImageButton
+            android:id="@+id/story"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/themeTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/auto_stories_fill0_wght400_grad0_opsz24" />
+
+        <ImageButton
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/themeTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vrpano_48px" />
+
+    </LinearLayout>
+</RelativeLayout>

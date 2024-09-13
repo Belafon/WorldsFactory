@@ -1,0 +1,35 @@
+{
+  "id": "@object:aple3",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Apple"
+  },
+  "Name": "aple3",
+  "Title": "aple3 - Apple",
+  "InitMethod": {
+    "id": "@method:@object:_aple3_initialize",
+    "Name": "aple3_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "aple3",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Apple"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

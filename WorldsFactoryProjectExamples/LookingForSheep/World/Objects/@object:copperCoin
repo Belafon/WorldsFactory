@@ -1,0 +1,35 @@
+{
+  "id": "@object:copperCoin",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Coin"
+  },
+  "Name": "copperCoin",
+  "Title": "copperCoin - Coin",
+  "InitMethod": {
+    "id": "@method:@object:_copperCoin_initialize",
+    "Name": "copperCoin_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "copperCoin",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Coin"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

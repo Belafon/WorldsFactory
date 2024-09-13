@@ -1,0 +1,35 @@
+{
+  "id": "@object:story",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Story"
+  },
+  "Name": "story",
+  "Title": "story - Story",
+  "InitMethod": {
+    "id": "@method:@object:_story_initialize",
+    "Name": "story_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "story",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Story"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

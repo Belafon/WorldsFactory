@@ -1,0 +1,41 @@
+{
+  "id": "@class:Story",
+  "postfixId": "Story",
+  "Name": "Story",
+  "description": "",
+  "parent": null,
+  "children": [],
+  "properties": [
+    {
+      "id": "@property:Story_lastMessage",
+      "name": "lastMessage",
+      "arrayBrackets": "",
+      "type": {
+        "referenceType": "Class",
+        "id": "@class:StoryMessage"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:Story_choosenOption",
+      "name": "choosenOption",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

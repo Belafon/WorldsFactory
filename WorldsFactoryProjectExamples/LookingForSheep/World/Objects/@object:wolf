@@ -1,0 +1,35 @@
+{
+  "id": "@object:wolf",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Creature"
+  },
+  "Name": "wolf",
+  "Title": "wolf - Creature",
+  "InitMethod": {
+    "id": "@method:@object:_wolf_initialize",
+    "Name": "wolf_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "wolf",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Creature"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

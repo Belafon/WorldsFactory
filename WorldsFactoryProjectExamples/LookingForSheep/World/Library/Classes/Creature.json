@@ -1,0 +1,147 @@
+{
+  "id": "@class:Creature",
+  "postfixId": "Creature",
+  "Name": "Creature",
+  "description": "",
+  "parent": null,
+  "children": [
+    {
+      "referenceType": "Class",
+      "id": "@class:Player"
+    }
+  ],
+  "properties": [
+    {
+      "id": "@property:Creature_location",
+      "name": "location",
+      "arrayBrackets": "",
+      "type": {
+        "referenceType": "Class",
+        "id": "@class:Place"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:Creature_informations",
+      "name": "informations",
+      "arrayBrackets": "[10]",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:Creature_inventory",
+      "name": "inventory",
+      "arrayBrackets": "[10]",
+      "type": {
+        "referenceType": "Class",
+        "id": "@class:Item"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "id": "@method:Creature_addInformation",
+      "Name": "addInformation",
+      "ReturnType": {
+        "id": "@basicType:Void",
+        "GetPostfixId": "Void"
+      },
+      "Parameters": [
+        {
+          "Name": "self",
+          "Type": {
+            "referenceType": "Class",
+            "id": "@class:Creature"
+          }
+        },
+        {
+          "Name": "information",
+          "Type": {
+            "id": "@basicType:String",
+            "GetPostfixId": "String"
+          }
+        }
+      ],
+      "classesPostfixId": "Creature",
+      "tags": [
+        "method",
+        "Method"
+      ]
+    },
+    {
+      "id": "@method:Creature_isTypeOfItemInInventory",
+      "Name": "isTypeOfItemInInventory",
+      "ReturnType": {
+        "id": "@basicType:Boolean",
+        "GetPostfixId": "Boolean"
+      },
+      "Parameters": [
+        {
+          "Name": "self",
+          "Type": {
+            "referenceType": "Class",
+            "id": "@class:Creature"
+          }
+        },
+        {
+          "Name": "classType",
+          "Type": {
+            "id": "@basicType:Void",
+            "GetPostfixId": "Void"
+          }
+        }
+      ],
+      "classesPostfixId": "Creature",
+      "tags": [
+        "method",
+        "Method"
+      ]
+    },
+    {
+      "id": "@method:Creature_addItemToInventory",
+      "Name": "addItemToInventory",
+      "ReturnType": {
+        "id": "@basicType:Void",
+        "GetPostfixId": "Void"
+      },
+      "Parameters": [
+        {
+          "Name": "self",
+          "Type": {
+            "referenceType": "Class",
+            "id": "@class:Creature"
+          }
+        },
+        {
+          "Name": "item",
+          "Type": {
+            "referenceType": "Class",
+            "id": "@class:Item"
+          }
+        }
+      ],
+      "classesPostfixId": "Creature",
+      "tags": [
+        "method",
+        "Method"
+      ]
+    }
+  ],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "@event:ContinueInTravel",
+  "Name": "ContinueInTravel",
+  "Condition": {
+    "id": "@method:eventsClass_ContinueInTravel_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_ContinueInTravel"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_ContinueInTravel",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_ContinueInTravel_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_ContinueInTravel"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_ContinueInTravel",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [
+      {
+        "referenceType": "Event",
+        "id": "@event:Initialize"
+      },
+      {
+        "referenceType": "Event",
+        "id": "@event:QuestionAboutWay"
+      },
+      {
+        "referenceType": "Event",
+        "id": "@event:StartConversation"
+      }
+    ],
+    "EventContainerReference": null
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

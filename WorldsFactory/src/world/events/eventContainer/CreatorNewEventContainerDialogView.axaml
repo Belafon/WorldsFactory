@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wf="using:WorldsFactory.world.events.eventContainer"
+        mc:Ignorable="d" d:DesignWidth="80" d:DesignHeight="180"
+        x:Class="WorldsFactory.world.events.eventContainer.CreatorNewEventContainerDialogView"
+        Title="Create New Event Container"
+        Width="250" Height="80"
+        WindowStartupLocation="CenterScreen"
+        x:DataType="wf:CreatorNewEventContainerDialogViewModel">
+  <StackPanel Orientation="Horizontal">
+    <TextBox Text="{Binding Name}" Padding="5"
+      Width="180" Margin="5" 
+      Height="20" />
+    <Button Name="CreateEventContainer" 
+      Content="Create" 
+      Padding="5" 
+      Command="{Binding CreateEventContainer_Click}" />
+  </StackPanel>
+</Window>

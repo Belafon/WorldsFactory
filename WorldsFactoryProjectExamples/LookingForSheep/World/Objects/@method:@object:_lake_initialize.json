@@ -1,0 +1,3 @@
+def lake_initialize(west_forest_leafy):
+	west_forest_leafy.description = "lake"
+	pass

@@ -1,0 +1,76 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	message = """
+	Derek kráčí hlouběji a hlouběji do lesa. Jehličnaté stromy
+	se tyčí vysoko do nebe, které je zakryté hustou vrstvou 
+	jehličí...
+	
+	Po ovci ovšem ani vidu, ani slechu... Nikde nic. Nebo že by? Něco se 
+	zlatavě zalesklo na jehličí. Opravdu, na jehličí ležela zlatá mince.
+	"Jak se tady obějvila?" Podivil se Derek...
+	
+	Když tu náhle hluboké hrdelní "Wrarwrr...".
+	Derekovi ztuhla krev v žilách. Z několika stran se objevila
+	smečka několika vlků a pomalu  se přibližovala zpoza stromů.
+	
+	"""
+	
+	objects.Derek.addItemToInventory(objects.goldenCoin)
+	
+	message += """
+	Dřevorubec se postavil ochranářsky před Dereka dřímající 
+	sekyru pevně v rukou.
+	
+	Vlci se ale nepřestali přibližovat. Oba pomalu couvali, 
+	když tu první vlk zaútočil. 
+	
+	Švih sem, švih tam, sekyra se míhala vzduchem...
+	První vlk zakňučel, když se ostří zarylo do huňatého kožichu.
+	Další vlk zaútočil, ale záhy uskočil před dřevorubcovým nápřahem.
+	Dřevorubec hlasitě oddechoval.
+	"""
+	
+	if "Mám hlad" in objects.lumberjack.informations:
+		message += """
+		"Mám docela hlad." Sýpavím hlasem zašeptal dřevorubec...
+		Dřevorubec se vzepřel a odrazil dalších několik vlčích výpadů.
+		První vlk se svalil bezvládně na zem a sekyra se zabarvila
+		kapičkami krve.
+		
+		Švih, mách, Derek pozorně sledoval souboj. Jeden z vlků se
+		zahryzl muži hluboko do ruky. Dřevorubec zavyl bolestí a 
+		podlomila se mu kolena.
+		
+		Derek ucítil, že souboj asi nedopadne dobře. Rozeběhl se rychle pryč.
+		"""
+		objects.Derek.addInformation("Dřevorubce sežrali vlci")
+		objects.story.lastMessage.options [0] = "Vrátit se zpět bez dřevorubce"
+	else:
+		message += """
+		Dřevorubec se vzepřel a odrazil dalších několik vlčích výpadů.
+		První vlk se svalil bezvládně na zem a sekyra se zabarvila
+		kapičkami krve. "Ještě že jsem si dal  něco k snědku." Utrousil
+		pod vousy.
+		
+		Švih, mách, Derek pozorně sledoval souboj. Dřevorubec zasadil
+		další tvrdou ránu a další vlk se zapotácel a odběhl pryč do lesa.
+		
+		Podobně jeho soudruh pocítil, že nemá šanci a zmizel v hustém porostu.
+		Dřevorubec zhluboka oddechoval.
+		
+		
+		Derek pokračoval v prohledání lesa. Nikde nic. 
+		
+		Vrátil se zpět za dřevorubcem. "Po  ovci nikde ani památky.
+		Asi ji sežraly ti vlci." Dřevorubec se zamyslel. "Hmm... Ale to by 
+		jsi našel ostatky."
+		"""
+		objects.Derek.addInformation("Ovce není hluboko v lese")
+		objects.story.lastMessage.options [0] = "Vrátit se zpět"
+	objects.story.lastMessage.message = message
+	
+	objects.lumberjack.location = objects.deep_forest
+	objects.Derek.location = objects.deep_forest
+	
+	
+	pass

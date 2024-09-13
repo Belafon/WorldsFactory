@@ -1,0 +1,28 @@
+{
+  "id": "@class:StoryOption",
+  "postfixId": "StoryOption",
+  "Name": "StoryOption",
+  "description": "",
+  "parent": null,
+  "children": [],
+  "properties": [
+    {
+      "id": "@property:StoryOption_title",
+      "name": "title",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

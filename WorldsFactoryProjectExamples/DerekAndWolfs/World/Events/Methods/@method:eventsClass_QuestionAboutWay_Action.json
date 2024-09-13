@@ -1,0 +1,16 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options[0] = "Pokračovat v cestě"
+	
+	objects.story.lastMessage.message  = """
+	"Kampak máte namířeno po Eldhamu?" zeptal se Derek.
+	"Plánuji se vrátit domů, do své vesnice," odpověděl Jakub. "Tam mě čeká rodina a farma."
+	"A co vaši blízcí, cestují také?" zajímal se Derek.
+	"Občas, ale většinou zůstávají doma," odpověděl Jakub. "Máme hodně práce kolem farmy."
+	"Mohu vás doprovodit na cestě do Eldhamu?" nabídl se Derek.
+	"Rád," odpověděl Jakub s úsměvem. "Společnost je vždy vítaná."
+	"""
+	
+	objects.time.currentPartOfDay = "sunset_1"
+	pass

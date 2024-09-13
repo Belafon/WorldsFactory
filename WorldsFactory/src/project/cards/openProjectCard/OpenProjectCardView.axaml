@@ -1,0 +1,138 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.project.cards.OpenProjectCardView"
+             xmlns:wf="using:WorldsFactory.project"
+             xmlns:wff="using:WorldsFactory"
+             x:DataType="wf:cards.OpenProjectCardViewViewModel"
+             Name="ParentUserControl"
+             Classes="Card"
+             MinHeight="400"
+             Width="320">    
+    <UserControl.Styles>
+        <!-- Style for buttons -->
+        <Style Selector="Button.h1">
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="30"    />
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="#007ACC"/> <!-- Blue background -->
+            <Setter Property="Foreground" Value="White"/> <!-- White text -->
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <!-- Style for TextBlocks -->
+        <Style Selector="TextBlock">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+
+
+        <Style Selector="ListBox">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#BFBFBF"/> <!-- Light gray border -->
+        </Style>
+
+        <!-- Style for ListBoxItem -->
+        <Style Selector="ListBoxItem">
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style Selector="ListBoxItem Button">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0"/>
+
+        </Style>
+    </UserControl.Styles>
+
+        <StackPanel HorizontalAlignment="Center" Name="OpenProjectCardViewBody">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="New Project" Click="OnCreateNewProjectButton_Clicked" Classes="h1"/>
+                <Border>
+                    <ToolTip.Tip>
+                        <ToolTip>
+                            <TextBlock Text="A project is identified by a file project.json."/>
+                        </ToolTip>
+                    </ToolTip.Tip>
+                    <Button Content="Open Project" Click="OnFindExistingProjectButton_Clicked" Classes="h1"/>
+                </Border>
+            </StackPanel>
+            <TextBlock Text="All Known Projects:"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8*"/> 
+                    <ColumnDefinition Width="*"/> 
+                </Grid.ColumnDefinitions>
+
+
+                
+                <ListBox 
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    Name="allKnownProjectsListBox" 
+                    ItemsSource="{Binding AllProjects}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+
+                                <Button 
+                                    Command="{Binding #ParentUserControl.OnOpenProjectButton_Clicked}" 
+                                    CommandParameter="{Binding $parent[ListBoxItem].DataContext}" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <ToolTip.Tip>
+                                                <TextBlock Text="{Binding Path}" TextWrapping="NoWrap" ></TextBlock>
+                                        </ToolTip.Tip>
+
+                                        <TextBlock TextTrimming="CharacterEllipsis" TextWrapping="NoWrap">
+                                            <Run Text="{Binding Name}"/>
+                                            <Run Text=" - "/>
+                                            <Run Text="{Binding Path}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Button>
+
+                            </ScrollViewer>
+
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+
+            <TextBlock Text="Recently Opened Projects:"/>
+         <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox ItemsSource="{Binding RecentProjects}" Grid.Row="0" Grid.Column="1" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                        
+                            <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+
+                                <Button 
+                                    Command="{Binding #ParentUserControl.OnOpenProjectButton_Clicked}" 
+                                    CommandParameter="{Binding $parent[ListBoxItem].DataContext}" >
+                                
+                                            <StackPanel Orientation="Horizontal">
+                                                <ToolTip.Tip>
+                                                        <TextBlock Text="{Binding Path}" TextWrapping="NoWrap"></TextBlock>
+                                                </ToolTip.Tip>
+                                                <TextBlock TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" MaxWidth="300">
+                                                    <Run Text="{Binding Name}"/>
+                                                    <Run Text=" - "/>
+                                                    <Run Text="{Binding Path}"/>
+                                                </TextBlock>
+                                            </StackPanel>
+                                </Button>
+                            </ScrollViewer>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid> 
+
+        </StackPanel>
+</UserControl>

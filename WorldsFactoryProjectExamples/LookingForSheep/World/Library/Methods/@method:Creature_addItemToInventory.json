@@ -1,0 +1,6 @@
+def addItemToInventory(self, item):
+	for i, value in enumerate(self.inventory):
+		if value is None:
+			self.inventory[i] = item
+			break
+	pass

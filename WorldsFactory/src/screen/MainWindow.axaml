@@ -1,0 +1,107 @@
+<Window xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    xmlns:titlebars="clr-namespace:WorldsFactory.screen.titleBar;assembly=WorldsFactory"
+    xmlns:mainPanelCard="clr-namespace:WorldsFactory.screen.panelCards;assembly=WorldsFactory"
+    xmlns:local="clr-namespace:WorldsFactory.screen"
+    xmlns:base="clr-namespace:WorldsFactory"
+    x:Class="WorldsFactory.MainWindow"
+    xmlns:wf="using:WorldsFactory"
+    x:DataType="wf:MainWindow"
+
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    WindowStartupLocation="CenterScreen"
+    ExtendClientAreaToDecorationsHint="True"
+    ExtendClientAreaChromeHints="NoChrome"
+    ExtendClientAreaTitleBarHeightHint="-1"
+    local:CallActionOnEventBehavior.TheEvent="{x:Static InputElement.PointerReleasedEvent}"
+    local:CallActionOnEventBehavior.TargetObject="{Binding RelativeSource={RelativeSource AncestorType=base:MainWindow}}"
+    local:CallActionOnEventBehavior.MethodToCall="OnPointerReleased">
+    
+    <Window.Styles>
+        <StyleInclude Source="/src/screen/design/TextSizes.axaml" />
+        <StyleInclude Source="/src/screen/design/DarkMode.axaml" />
+        <StyleInclude Source="/src/screen/design/ControlsGlobalStyles.axaml" />
+    </Window.Styles>
+
+    <NativeMenu.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="Project">
+                <NativeMenuItem.Menu>
+                    <NativeMenu x:DataType="wf:MainWindowViewModel">
+                        <NativeMenuItem Header="Open" Command="{Binding OpenProject_Clicked}" />
+                    </NativeMenu>
+                </NativeMenuItem.Menu>
+            </NativeMenuItem>
+            <NativeMenuItem Header="New" >
+                <NativeMenuItem.Menu>
+                    <NativeMenu x:DataType="wf:MainWindowViewModel">
+                        <NativeMenuItem Header="... Project" Command="{Binding CreateNewProject_Clicked}" />
+                        <!-- <NativeMenuItem Header="... Window" IsEnabled="{Binding IsWindowBindedWithProject}" /> -->
+                        <NativeMenuItem Header="World" IsEnabled="{Binding IsWindowBindedWithProject}">
+                            <NativeMenuItem.Menu>
+                                <NativeMenu>
+                                    <NativeMenuItem Header="Class" Command="{Binding CreateNewClass_Clicked}" />
+                                    <NativeMenuItem Header="Object" Command="{Binding CreateNewObject_Clicked}"/>
+                                    <NativeMenuItem Header="Event" Command="{Binding CreateNewEvent_Clicked}"/>
+                                    <NativeMenuItem Header="Linear event" Command="{Binding CreateNewLinearEvent_Clicked}"/>
+                                </NativeMenu>
+                            </NativeMenuItem.Menu>
+                        </NativeMenuItem>
+                    </NativeMenu>
+                </NativeMenuItem.Menu>
+            </NativeMenuItem>
+
+            <NativeMenuItem Header="Export" x:DataType="wf:MainWindowViewModel" IsEnabled="{Binding IsWindowBindedWithProject}">
+                <NativeMenuItem.Menu>
+                    <NativeMenu>
+                    <NativeMenuItem Header="All Data" Command="{Binding ExportAllData_Clicked}"/>
+                    </NativeMenu>
+                </NativeMenuItem.Menu>
+            </NativeMenuItem>
+
+            <NativeMenuItem Header="View" x:DataType="wf:MainWindowViewModel" IsEnabled="{Binding IsWindowBindedWithProject}">
+                <NativeMenuItem.Menu>
+                    <NativeMenu>
+                        <NativeMenuItem Header="Project Overview" Command="{Binding ViewProjectOverview_Clicked}"/>
+                    </NativeMenu>
+                </NativeMenuItem.Menu>
+            </NativeMenuItem>
+        </NativeMenu>
+    </NativeMenu.Menu>
+    
+
+    <DockPanel HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Name="ContentWrapper"
+        x:DataType="wf:MainWindow" >
+        <titlebars:MainTitleBarView
+            HorizontalAlignment="Stretch"
+            Height="30"
+            DockPanel.Dock="Top"/>
+        <DockPanel>
+            <DockPanel 
+                DockPanel.Dock="Bottom"
+                Height="20"
+                HorizontalAlignment="Stretch"
+                Background="Green">
+            </DockPanel>
+
+            <DockPanel 
+                DockPanel.Dock="Left"
+                Width="50"
+                HorizontalAlignment="Stretch" 
+                Background="Yellow"
+                Name="LeftPanel">
+                
+            </DockPanel>
+            
+            <DockPanel
+                Name="WindowContent">
+            </DockPanel>
+        </DockPanel>
+    </DockPanel>
+
+</Window>

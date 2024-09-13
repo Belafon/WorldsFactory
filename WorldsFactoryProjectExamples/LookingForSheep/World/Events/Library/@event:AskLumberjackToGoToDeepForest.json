@@ -1,0 +1,64 @@
+{
+  "id": "@event:AskLumberjackToGoToDeepForest",
+  "Name": "AskLumberjackToGoToDeepForest",
+  "Condition": {
+    "id": "@method:eventsClass_AskLumberjackToGoToDeepForest_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_AskLumberjackToGoToDeepForest"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_AskLumberjackToGoToDeepForest",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_AskLumberjackToGoToDeepForest_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_AskLumberjackToGoToDeepForest"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_AskLumberjackToGoToDeepForest",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [
+      {
+        "referenceType": "Event",
+        "id": "@event:QuestionLumberjackLostSheep"
+      }
+    ],
+    "EventContainerReference": {
+      "referenceType": "EventContainer",
+      "id": "@eventContainer:TalkWithLumberjack"
+    }
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

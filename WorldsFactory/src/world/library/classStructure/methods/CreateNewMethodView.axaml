@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.world.library.classStructure.CreateNewMethodView"
+             xmlns:wf="using:WorldsFactory.world.library.classStructure"
+             x:DataType="wf:CreateNewMethodViewModel">
+    <Grid VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <!-- Titles: Name and Return Type -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Return Type"/>
+            <TextBlock Text="Name" Margin="0,0,20,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+            <!-- Return Type and Method Name -->
+            <StackPanel Orientation="Horizontal">
+                <AutoCompleteBox 
+                    Name="SetReturnTypeAutoCompleteBox"
+                    MinWidth="180"
+                    ItemsSource="{Binding Library.AllTypes}"
+                    Text="{Binding ReturnTypeInput}"
+                    FilterMode="ContainsOrdinal"
+                    Watermark="Return Type" />
+
+                <TextBox 
+                    Name="SetMethodsNameAutoCompleteBox" 
+                    Text="{Binding NameInput}" 
+                    MinWidth="180" 
+                    Watermark="Method Name"/>
+            </StackPanel>
+			<StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+				<TextBlock Text="Parameters" Margin="0,0,20,0"/>
+			</StackPanel>
+
+            <!-- Parameter List -->
+            <ItemsControl Name="ParameterList" ItemsSource="{Binding Parameters}" />
+
+            <!-- Create Method Button -->
+            <Button Content="Create Method" Command="{Binding CreateMethod}" Name="CreateNewMethodButton" />
+        </StackPanel>
+    </Grid>
+</UserControl>

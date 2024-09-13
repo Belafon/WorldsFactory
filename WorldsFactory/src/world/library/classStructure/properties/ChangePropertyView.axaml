@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.world.library.classStructure.ChangePropertyView"
+             xmlns:wf="using:WorldsFactory.world.library.classStructure"
+             x:DataType="wf:ChangePropertyViewModel"
+             Name="ChangePropertyViewControl">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <AutoCompleteBox 
+             Name="SetPropertyTypeAutoCompleteBox"
+             MinWidth="150"
+             ItemsSource="{Binding Library.AllTypes}" 
+             Text="{Binding TypeInput}"
+             FilterMode="ContainsOrdinal"
+             Grid.Column="0" />
+
+        <TextBox
+             Margin="10,0,0,0"
+             Name="SetPropertiesNameAutoCompleteBox"
+             Text="{Binding NameInput}"
+             MinWidth="150"
+             Grid.Column="1" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,46 @@
+{
+  "id": "@class:Creature",
+  "postfixId": "Creature",
+  "Name": "Creature",
+  "description": "",
+  "parent": null,
+  "children": [
+    {
+      "referenceType": "Class",
+      "id": "@class:Player"
+    }
+  ],
+  "properties": [
+    {
+      "id": "@property:Creature_location",
+      "name": "location",
+      "arrayBrackets": "",
+      "type": {
+        "referenceType": "Class",
+        "id": "@class:Place"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    },
+    {
+      "id": "@property:Creature_inventory",
+      "name": "inventory",
+      "arrayBrackets": "[10]",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

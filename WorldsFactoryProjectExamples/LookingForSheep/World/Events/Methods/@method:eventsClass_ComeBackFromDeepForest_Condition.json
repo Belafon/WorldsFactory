@@ -1,0 +1,4 @@
+def Condition(self):
+	comeBack = "Vrátit se zpět" == objects.story.choosenOption
+	comeBackWithoutLumberjack = "Vrátit se zpět bez dřevorubce" == objects.story.choosenOption
+	return comeBack or comeBackWithoutLumberjack

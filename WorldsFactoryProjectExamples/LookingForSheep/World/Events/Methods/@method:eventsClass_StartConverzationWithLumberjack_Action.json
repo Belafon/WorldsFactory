@@ -1,0 +1,17 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options [0] = "Jít se podívat na louku"
+	objects.story.lastMessage.options [1] = "Jít hledat k jezeru"
+	index = 2
+	
+	if objects.Derek.isTypeOfItemInInventory(@class:Apple):
+		objects.story.lastMessage.options [index] = "Zkusit prodat nějaké jablko"
+		index += 1
+	
+	objects.story.lastMessage.options [index] = "Zeptat se na ztracenou ovci"
+	
+	message = """
+	"""
+	objects.story.lastMessage.message = message
+	pass

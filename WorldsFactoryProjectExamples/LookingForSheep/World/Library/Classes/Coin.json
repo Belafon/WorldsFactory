@@ -1,0 +1,40 @@
+{
+  "id": "@class:Coin",
+  "postfixId": "Coin",
+  "Name": "Coin",
+  "description": "",
+  "parent": {
+    "referenceType": "Class",
+    "id": "@class:Item"
+  },
+  "children": [],
+  "properties": [],
+  "methods": [
+    {
+      "id": "@method:Coin_initialize",
+      "Name": "initialize",
+      "ReturnType": {
+        "id": "@basicType:Void",
+        "GetPostfixId": "Void"
+      },
+      "Parameters": [
+        {
+          "Name": "self",
+          "Type": {
+            "referenceType": "Class",
+            "id": "@class:Coin"
+          }
+        }
+      ],
+      "classesPostfixId": "Coin",
+      "tags": [
+        "method",
+        "Method"
+      ]
+    }
+  ],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

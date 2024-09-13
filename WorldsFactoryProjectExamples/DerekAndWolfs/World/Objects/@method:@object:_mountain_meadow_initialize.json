@@ -1,0 +1,3 @@
+def mountain_meadow_initialize(mountain_meadow):
+	mountain_meadow.description = "mountain_meadow"
+	pass

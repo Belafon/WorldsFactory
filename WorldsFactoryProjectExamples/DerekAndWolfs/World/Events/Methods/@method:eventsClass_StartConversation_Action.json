@@ -1,0 +1,32 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options[0] = "Zeptat se kam má Jakub namířeno" 
+	objects.story.lastMessage.options[1] = "Pokračovat v cestě"
+	
+	objects.story.lastMessage.message  = """
+	"Dobrý den," pozdravil Derek. "Kampak se to ubíráte?"
+	"Dobrý den," odpověděl muž. "Mířím do Eldhamu. A vy?"
+	"Také do Eldhamu," odpověděl Derek. "Cestuji už několik dní z Tarsis."
+	"To je pěkná štreka," poznamenal muž. "Já jsem z vesničky nedaleko odtud."
+	"To je fajn," usmál se Derek. "Já se jmenuji Derek, obchodník."
+	"Já se jmenuji Jakub," představil se muž.
+	"Těší mě, Jakube," podal mu Derek ruku.
+	
+	"Jak se vám líbí cesta?" zeptal se Derek.
+	"Je to docela náročné, ale krásné," odpověděl Jakub. "Ta krajina je úchvatná."
+	"Souhlasím," přikývl Derek. "A co vezete do Eldhamu?"
+	"Vezu pytle s obilím, které prodám na trhu," odpověděl Jakub.
+	
+	"A co si koupíte za peníze?" zeptal se Derek.
+	"Potřebuji nějaké nástroje a zásoby pro farmu," odpověděl Jakub.
+	"Já zase nakoupím zásoby na další cestu," řekl Derek.
+	"Kam se chystáte dál?" zeptal se Jakub.
+	"To ještě nevím," odpověděl Derek. "Uvidím, co mi cesta přinese."
+	"To zní dobrodružně," poznamenal Jakub.
+	"To ano," usmál se Derek. "Cestování je můj život."
+	"Já bych se nikdy neodvážil opustit svůj domov na tak dlouhou dobu," řekl Jakub.
+	"Každý má jiné sny," odpověděl Derek.
+	"To je pravda," přikývl Jakub.
+	"""
+	pass

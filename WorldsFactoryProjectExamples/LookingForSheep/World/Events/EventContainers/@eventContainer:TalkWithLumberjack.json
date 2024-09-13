@@ -1,0 +1,29 @@
+{
+  "name": "TalkWithLumberjack",
+  "tags": [],
+  "id": "@eventContainer:TalkWithLumberjack",
+  "isAtFirstLevel": true,
+  "events": [
+    {
+      "referenceType": "Event",
+      "id": "@event:StartConverzationWithLumberjack"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:TryToSellApplesToLumberjack"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:AskLumberjackToGoToDeepForest"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:FirstMeetLumberjack"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:QuestionLumberjackLostSheep"
+    }
+  ],
+  "subContainers": []
+}

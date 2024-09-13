@@ -1,0 +1,29 @@
+{
+  "name": "TalkWithFisherman",
+  "tags": [],
+  "id": "@eventContainer:TalkWithFisherman",
+  "isAtFirstLevel": true,
+  "events": [
+    {
+      "referenceType": "Event",
+      "id": "@event:FirstMeetFisherman"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:StartConversationWithFisherman"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:QuestionFishermanLostSheep"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:ExchangeInfoForCopperCoin"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:ExchangeInfoForGoldenCoin"
+    }
+  ],
+  "subContainers": []
+}

@@ -1,0 +1,28 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style Selector="Button">
+        <!-- darkmode for buttons and all other controls -->
+        <Setter Property="Background" Value="#8F8F8F" />
+        <Setter Property="Foreground" Value="#FFFFFF" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+    <Style Selector="Button:hover">
+        <Setter Property="Background" Value="#000000" />
+        <Setter Property="Foreground" Value="#FFFFFF" />
+    </Style>
+    <Style Selector="TextBox">
+        <!-- darkmode for textboxes and all other controls -->
+        <Setter Property="Background" Value="#0F0F0F" />
+        <Setter Property="Foreground" Value="#FFFFFF" />
+    </Style>
+    <Style Selector="TextBlock">
+        <Setter Property="Foreground" Value="#FFFFFF" />
+    </Style>
+    <Style Selector="Window">
+        <Setter Property="Background" Value="#0F0F0F" />
+    </Style>
+    <Style Selector="UserControl">
+        <Setter Property="Background" Value="#0F0F0F" />
+        <Setter Property="MinWidth" Value="320" />
+    </Style>
+</Styles>

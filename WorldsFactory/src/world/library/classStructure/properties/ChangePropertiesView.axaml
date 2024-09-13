@@ -1,0 +1,27 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:wf="using:WorldsFactory.world.library.classStructure"
+             x:Class="WorldsFactory.world.library.classStructure.ChangePropertiesView"
+             x:DataType="wf:ChangePropertiesViewModel"
+             Name="ChangePropertiesViewControl">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <ItemsControl ItemsSource="{Binding Properties}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="wf:ChangePropertyView">
+                    <ContentControl Content="{Binding}">
+                        <ContentControl.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Delete" Command="{Binding $parent[wf:ChangePropertiesViewModel].DeleteProperty}" CommandParameter="{Binding}"/>
+                            </ContextMenu>
+                        </ContentControl.ContextMenu>
+                    </ContentControl>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Button Content="Add new property" Name="CreateNewPropertyButton" Command="{Binding CreateProperty_Click}" Margin="5"/>
+    </StackPanel>
+
+</UserControl>

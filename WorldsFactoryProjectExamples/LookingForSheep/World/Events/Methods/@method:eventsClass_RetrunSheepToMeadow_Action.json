@@ -1,0 +1,23 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.Derek.location = objects.meadow
+	objects.lostSheep.location = objects.meadow
+	
+	message = """
+	Derek se snažil nahánět ovečku správným směrem zpět 
+	na louku za pastevcem ke stádu.
+	
+	Z dálky bylo z výšky stádo vidět jako kupa malých bílích teček.
+	Nakonec se ale Derekovi povedlo nahnat ovci zprátky.
+	
+	Pastevec byl velmi nadšený a poděkoval Derekovi za jeho službu.
+	
+	Derek pak následně pokračoval v cestování dál.
+	
+	
+	Konec
+	"""
+	
+	objects.story.lastMessage.message = message
+	pass

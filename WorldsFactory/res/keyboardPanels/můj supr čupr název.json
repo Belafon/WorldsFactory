@@ -1,0 +1,25 @@
+{
+    "name": "můj supr čupr název",
+    "dependencies": [],
+    "set": [
+        {
+            "order": "ordered",
+            "keys": [
+                {
+                    "action": "down",
+                    "key": "LeftCtrl"
+                },
+                {
+                    "action": "down",
+                    "key": "A"
+                },
+                {
+                    "action": "down",
+                    "key": "B"
+                }
+            ],
+            "typeFunction": "writeText",
+            "function": "ahojky jak se vede"
+        }
+    ]
+}

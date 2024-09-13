@@ -1,0 +1,5 @@
+def cliff_initialize(cliff):
+	cliff.description = "cliff"
+	cliff.weather = "idle"
+	cliff.clouds = "clear"
+	pass

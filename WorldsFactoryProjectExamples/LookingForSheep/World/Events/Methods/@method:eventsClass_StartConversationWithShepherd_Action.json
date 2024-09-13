@@ -1,0 +1,16 @@
+def Action(self):
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options [0] = "Jít hledat k jezeru"
+	index = 1
+	info = objects.Derek.informations
+	if not "Dřevorubce sežrali vlci" in info and not "Ovce není hluboko v lese"  in info:
+		objects.story.lastMessage.options [index] = "Jít hledat do lesa"
+		index += 1
+	
+	objects.story.lastMessage.message  = """
+	"Co bych tak řekl, moc toho není. Utekla asi buď k lesu, nebo k jezeru.
+	Zeptal bych se lidí jestli ji neviděli. U jezera bývá rybář, v lese naopak
+	bývá lesník." Vyjádřil se pastevec.
+	"""
+	pass

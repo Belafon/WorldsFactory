@@ -1,0 +1,17 @@
+{
+  "name": "TalkWithShepherd",
+  "tags": [],
+  "id": "@eventContainer:TalkWithShepherd",
+  "isAtFirstLevel": true,
+  "events": [
+    {
+      "referenceType": "Event",
+      "id": "@event:StartConversationWithShepherd"
+    },
+    {
+      "referenceType": "Event",
+      "id": "@event:GoToMeadow"
+    }
+  ],
+  "subContainers": []
+}

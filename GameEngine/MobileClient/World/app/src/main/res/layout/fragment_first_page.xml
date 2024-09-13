@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuScreen.welcomingFragments.FirstPage"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:paddingTop="100dp"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|top" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_name"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:id="@+id/welcome_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:id="@+id/welcome_text"
+            android:gravity="center"
+            android:text="@string/welcoming_text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/author"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:id="@+id/author"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

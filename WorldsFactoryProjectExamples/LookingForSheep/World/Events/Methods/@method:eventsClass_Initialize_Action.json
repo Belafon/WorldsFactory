@@ -1,0 +1,62 @@
+def Action(self):
+	# the places have to be initialized
+	objects.map.places[0][0] = objects.forest_leafy
+	objects.map.places[0][1] = objects.meadow
+	objects.map.places[1][0] = objects.mountain_meadow
+	objects.map.places[1][1] = objects.lake
+	objects.map.places[1][2] = objects.cliff
+	objects.map.places[0][2] = objects.deep_forest
+	
+	objects.story.lastMessage = objects.currentStoryMessage
+	
+	objects.Derek.inventory[0] = objects.apple1
+	objects.lumberjack.inventory[0] = objects.copperCoin
+	
+	objects.story.lastMessage.clearOptionsArray()
+	objects.story.lastMessage.options [0] = "Začít konverzaci"
+	objects.story.lastMessage.options [1] = "Jít hledat do lesa"
+	objects.story.lastMessage.options [2] = "Jít hledat k jezeru"
+	
+	# the setting message automaticallly sends info 
+	# to the client also about the options, the options 
+	# have to be set before the message is set
+	objects.story.lastMessage.message = """
+	Derek odpovídá obrázku docela běžného obchodníka. 
+	Jeho cesty obvykle vedly mezi jihovýchodním pobřežím 
+	Geparimu a horských oblastí v severnější části až do měst 
+	v úpatí Korunového pohoří.
+	
+	Minulou zimu se Derek dostal do nesnází, když ho na cestě 
+	zastihla nečekaná sněhová vánice. Pastýř, který žil poblíž, 
+	mu tehdy nabídl přístřeší a zachránil ho před jistým zmrznutím. 
+
+	Nyní, o několik měsíců později, když Derek opět putoval okolo,
+	zjistil, že pastýř má problém. Ztratila se mu jedna z jeho ovcí a 
+	Derek se rozhodl pastýři pomoci jako poděkování za zimní záchranu. 
+	Nabídl se, že ztracenou ovci najde.
+	
+	Aktuálně se derek nachází na pastvinách spolu s pastýřem...
+	"""
+	objects.time.currentPartOfDay = "morning"
+	# weather can be one of these values:
+	#       idle, gentle_rain, rain, heavy_rain, storm
+	objects.forest_leafy.weather = "idle"
+	objects.meadow.weather = "idle"
+	objects.mountain_meadow.weather = "idle"
+	objects.lake.weather = "idle"
+	# type of clouds can be one of these:
+	# clear, few, scattered, overcast
+	objects.forest_leafy.clouds = "clear"
+	objects.meadow.clouds = "clear"
+	objects.mountain_meadow.clouds = "clear"
+	objects.lake.clouds = "few"
+	# these can be initialized also in 
+	# the objects initialize method as it is
+	# in the deep_forest object
+	objects.shepherd.location = objects.meadow
+	objects.Derek.location = objects.meadow
+	objects.fisherman.location = objects.lake
+	objects.lumberjack.location = objects.forest_leafy
+	objects.wolf.location = objects.deep_forest
+	objects.lostSheep.location = objects.cliff
+	pass

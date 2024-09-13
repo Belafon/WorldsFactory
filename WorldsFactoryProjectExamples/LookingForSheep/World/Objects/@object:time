@@ -1,0 +1,35 @@
+{
+  "id": "@object:time",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Time"
+  },
+  "Name": "time",
+  "Title": "time - Time",
+  "InitMethod": {
+    "id": "@method:@object:_time_initialize",
+    "Name": "time_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "time",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Time"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

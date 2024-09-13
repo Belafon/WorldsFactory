@@ -1,0 +1,35 @@
+{
+  "id": "@object:lostSheep",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Creature"
+  },
+  "Name": "lostSheep",
+  "Title": "lostSheep - Creature",
+  "InitMethod": {
+    "id": "@method:@object:_lostSheep_initialize",
+    "Name": "lostSheep_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "lostSheep",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Creature"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

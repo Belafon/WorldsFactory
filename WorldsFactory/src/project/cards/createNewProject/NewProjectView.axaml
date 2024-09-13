@@ -1,0 +1,79 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.project.NewProjectCardView"
+             Classes="card"
+             MinHeight="600">
+    <UserControl.Styles>
+        <!-- Define a style for the TextBlock -->
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="0,0,0,20"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Define a style for the buttons -->
+        <Style Selector="Button">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Margin" Value="0,10"/>
+        </Style>
+
+        <!-- Define a style for the TextBoxes -->
+        <Style Selector="TextBox">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Margin" Value="0,10"/>
+        </Style>
+        
+        <Style Selector="TabControl">
+            <Setter Property="MinHeight" Value="225"/>
+        </Style>
+    </UserControl.Styles>
+
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="New Project" FontWeight="Bold"/>
+
+            <TextBox Name="ProjectName" Watermark="Enter Project Name"/>
+            <Button Name="SelectPathButton" Content="Select Path"/>
+
+            <TextBox Name="PathInput" Watermark="Path"/>
+
+            <TabControl Name="SelectWorldTabControl">
+                <TabItem>
+                    <TabItem.Header>
+                        <TextBlock VerticalAlignment="Center">Create new World</TextBlock>
+                    </TabItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <TextBox Name="NewWorldName" Watermark="Enter World name"/>
+                    </StackPanel>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <TextBlock VerticalAlignment="Center">Load existing World</TextBlock>
+                    </TabItem.Header>
+                    <StackPanel Orientation="Vertical">
+                        <Border>
+                            <ToolTip.Tip>
+                                <ToolTip>
+                                    <TextBlock Text="A world is identified by a file world.json."/>
+                                </ToolTip>
+                            </ToolTip.Tip>
+
+                            <Button Name="SelectPathWorldButton" Content="Select Path"/>
+                        </Border>
+
+                        <TextBox Name="PathInputToWorld" Watermark="Path"/>
+                        <TextBlock Name="ExistingWorldName" Text=""/>
+
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+
+            <Button Name="CreateButton" Content="Create Project"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

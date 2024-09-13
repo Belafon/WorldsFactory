@@ -1,0 +1,64 @@
+{
+  "id": "@event:ExchangeInfoForCopperCoin",
+  "Name": "ExchangeInfoForCopperCoin",
+  "Condition": {
+    "id": "@method:eventsClass_ExchangeInfoForCopperCoin_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_ExchangeInfoForCopperCoin"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_ExchangeInfoForCopperCoin",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_ExchangeInfoForCopperCoin_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_ExchangeInfoForCopperCoin"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_ExchangeInfoForCopperCoin",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [
+      {
+        "referenceType": "Event",
+        "id": "@event:QuestionFishermanLostSheep"
+      }
+    ],
+    "EventContainerReference": {
+      "referenceType": "EventContainer",
+      "id": "@eventContainer:TalkWithFisherman"
+    }
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

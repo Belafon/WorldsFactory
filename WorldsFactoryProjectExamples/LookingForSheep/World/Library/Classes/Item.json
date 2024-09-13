@@ -1,0 +1,37 @@
+{
+  "id": "@class:Item",
+  "postfixId": "Item",
+  "Name": "Item",
+  "description": "",
+  "parent": null,
+  "children": [
+    {
+      "referenceType": "Class",
+      "id": "@class:Apple"
+    },
+    {
+      "referenceType": "Class",
+      "id": "@class:Coin"
+    }
+  ],
+  "properties": [
+    {
+      "id": "@property:Item_location",
+      "name": "location",
+      "arrayBrackets": "",
+      "type": {
+        "referenceType": "Class",
+        "id": "@class:Place"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

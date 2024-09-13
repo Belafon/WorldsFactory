@@ -1,0 +1,24 @@
+def Action(self):
+	last_location = objects.Derek.location
+	comeBackWithoutLumberjack = "Vrátit se zpět bez dřevorubce" == objects.story.choosenOption
+	objects.Derek.location = objects.forest_leafy
+	if not comeBackWithoutLumberjack:
+		objects.lumberjack.location = objects.forest_leafy
+		message  = """
+	"Tak bouhžel, ale rád jsem ti pomohl. Můžeš se zkusit poptat někde jinde."
+		"""
+	else:
+		message  = """
+	Derek doběhl až k místu, kde dřevorubec dříve pracoval. Opřel se o strom 
+	a z hluboka dýchal. Ohlédl se, jestli neuslyší, nebo neuvidí vlky... Nikde nikdo,
+	oddechl si Derek.
+		"""
+	
+	
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options [0] = "Jít hledat k jezeru"
+	objects.story.lastMessage.options [1] = "Jít se podívat na louku"
+	objects.story.lastMessage.message = message
+	
+	pass

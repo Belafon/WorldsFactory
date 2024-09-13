@@ -1,0 +1,35 @@
+{
+  "id": "@object:deep_forest",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Place"
+  },
+  "Name": "deep_forest",
+  "Title": "deep_forest - Place",
+  "InitMethod": {
+    "id": "@method:@object:_deep_forest_initialize",
+    "Name": "deep_forest_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "deep_forest",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Place"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

@@ -1,0 +1,32 @@
+def Action(self):
+	objects.Derek.addInformation("Ovce zaběhla do hlubokého lesa.")
+	
+	objects.story.lastMessage.clearOptionsArray()
+	
+	objects.story.lastMessage.options [0] = "Jít se podívat na louku"
+	objects.story.lastMessage.options [1] = "Jít hledat k jezeru"
+	objects.story.lastMessage.options [2] = "Jít hledat hluboko do lesa bez dřevorubce"
+	objects.story.lastMessage.options [3] = "Poprosit dřevorubce, aby šel se mnou do hlubokého lesa"
+	index = 4
+	
+	if objects.Derek.isTypeOfItemInInventory(@class:Apple):
+		objects.story.lastMessage.options [index] = "Zkusit prodat nějaké jablko"
+		index += 1
+	
+	message = """
+	
+	"Neviděl jste, nebo neslyšel jste tady náhodou nedávno 
+	ovci pastýře z louky? Bohužel se mu jedna někde ztratila
+	a já mu jí nyní pomáhám nalézt."
+	
+	"Hmm..." Zamyslel se dřevorubec. "No jistě, viděl jsem nějakou ovci.
+	Napadlo mě že se asi ztratila, tak jsem se ji snažil chytnout. 
+	Bohužel byla moc vystrašená a rychlá. Utekla mi směrem 
+	dál do hlubšího lesa. Bojím se, že jí už sežrali vlci."
+	
+	"Jestli se budeš chtít vydat do lesa tak pozor na vlky, nejednoho už
+	sežrali."
+	
+	"""
+	objects.story.lastMessage.message = message
+	pass

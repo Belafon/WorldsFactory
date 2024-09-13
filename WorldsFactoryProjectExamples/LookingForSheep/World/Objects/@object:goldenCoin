@@ -1,0 +1,35 @@
+{
+  "id": "@object:goldenCoin",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:Coin"
+  },
+  "Name": "goldenCoin",
+  "Title": "goldenCoin - Coin",
+  "InitMethod": {
+    "id": "@method:@object:_goldenCoin_initialize",
+    "Name": "goldenCoin_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "goldenCoin",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:Coin"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "@event:StartConversationWithFisherman",
+  "Name": "StartConversationWithFisherman",
+  "Condition": {
+    "id": "@method:eventsClass_StartConversationWithFisherman_Condition",
+    "Name": "Condition",
+    "ReturnType": {
+      "id": "@basicType:Boolean",
+      "GetPostfixId": "Boolean"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_StartConversationWithFisherman"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_StartConversationWithFisherman",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "Action": {
+    "id": "@method:eventsClass_StartConversationWithFisherman_Action",
+    "Name": "Action",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "self",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:eventsClass_StartConversationWithFisherman"
+        }
+      }
+    ],
+    "classesPostfixId": "eventsClass_StartConversationWithFisherman",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "SequenceManager": {
+    "Events": [
+      {
+        "referenceType": "Event",
+        "id": "@event:FirstMeetFisherman"
+      }
+    ],
+    "EventContainerReference": {
+      "referenceType": "EventContainer",
+      "id": "@eventContainer:TalkWithFisherman"
+    }
+  },
+  "tags": [
+    "event",
+    "Event"
+  ]
+}

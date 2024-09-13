@@ -1,0 +1,28 @@
+{
+  "id": "@class:Time",
+  "postfixId": "Time",
+  "Name": "Time",
+  "description": "",
+  "parent": null,
+  "children": [],
+  "properties": [
+    {
+      "id": "@property:Time_currentPartOfDay",
+      "name": "currentPartOfDay",
+      "arrayBrackets": "",
+      "type": {
+        "id": "@basicType:String",
+        "GetPostfixId": "String"
+      },
+      "tags": [
+        "Property",
+        "property"
+      ]
+    }
+  ],
+  "methods": [],
+  "tags": [
+    "class",
+    "Class"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "@object:currentStoryMessage",
+  "Type": {
+    "referenceType": "Class",
+    "id": "@class:StoryMessage"
+  },
+  "Name": "currentStoryMessage",
+  "Title": "currentStoryMessage - StoryMessage",
+  "InitMethod": {
+    "id": "@method:@object:_currentStoryMessage_initialize",
+    "Name": "currentStoryMessage_initialize",
+    "ReturnType": {
+      "id": "@basicType:Void",
+      "GetPostfixId": "Void"
+    },
+    "Parameters": [
+      {
+        "Name": "currentStoryMessage",
+        "Type": {
+          "referenceType": "Class",
+          "id": "@class:StoryMessage"
+        }
+      }
+    ],
+    "classesPostfixId": "@object:",
+    "tags": [
+      "method",
+      "Method"
+    ]
+  },
+  "tags": [
+    "object",
+    "Object"
+  ]
+}

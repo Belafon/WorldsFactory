@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WorldsFactory.screen.panelCards.CardsTabView"
+             Name="StartCardsTab">
+             
+    <UserControl.Styles>
+        <Style Selector="Button.cardsPowerButton">
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+    </UserControl.Styles>
+    <StackPanel Orientation="Horizontal" Background="Gray">
+        <Border BorderThickness="0 0 0 0" Padding="2 0 0 0"/>
+        <DockPanel>
+            <Button DockPanel.Dock="Left" Height="25" Width="25" Background="Red" VerticalAlignment="Center">
+                <Svg Path="/res/images/icons/closeCard.svg" Width="13" Height="13" Margin="1 1 0 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>    
+                </Button>
+                <TextBlock Name="CardsTabViewTitle" Padding="2 0 0 0" VerticalAlignment="Center"/>
+        </DockPanel>
+        <Border BorderThickness="0 0 0 0" Padding="0 0 2 0"/>
+    </StackPanel>
+</UserControl>
